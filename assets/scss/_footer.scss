@@ -1,0 +1,63 @@
+@import "_variables";
+
+.footer {
+  padding: 120px 0 80px;
+  background-color: $black;
+
+  &__logo {
+    display: block;
+    text-align: center;
+
+    img {
+      width: 375px;
+      height: auto;
+    }
+  }
+
+  &__sns {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 0;
+
+    svg {
+      width: 20px;
+      margin: 0 12px;
+    }
+  }
+
+  &__snsLink {
+    display: inline-flex;
+  }
+
+  &__links {
+    margin: 40px 0 0;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 17px;
+    font-style: italic;
+    font-weight: 600;
+    letter-spacing: 2px;
+
+    ul {
+      margin: 0;
+    }
+
+    .menu-item {
+      display: flex;
+      justify-content: center;
+    }
+
+    a {
+      color: $white;
+    }
+  }
+
+  &__copyrightWrapper {
+    margin: 48px 0 0;
+    text-align: center;
+  }
+
+  &__copyright {
+    font-family: "Ubuntu", sans-serif;
+    color: $white;
+  }
+}

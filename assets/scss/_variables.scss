@@ -1,0 +1,34 @@
+// Border
+// $border-radius-regular: 4px;
+// $border-width-regular: 1px;
+
+// hover Opacity Rule
+// $--hover-opacity: 0.6;
+
+// Color Rule
+$--color-primary: #04287e;
+$--color-primary-tint: #4c8fcd;
+$--color-primary-tint-light: #8abed6;
+$--color-primary-tint-very-light: #d6eefa;
+
+$white: #ffffff;
+$black: #000000;
+
+// Width Rule
+$--content-width-xxs: 320px;
+$--content-width-xs: 769px;
+$--content-width-sm: 1000px;
+$--content-width-md: 1100px;
+$--content-width-xl: 1280px;
+
+// media-query
+$breakpoints: (
+  "mobile": "screen and (max-width: 480px)",
+  "pc": "screen and (min-width: 481px)",
+);
+
+@mixin mq($breakpoint: pc) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
