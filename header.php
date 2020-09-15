@@ -49,5 +49,6 @@
 						'theme_location' => 'primary'
 				));
       ?>
+			<?php echo get_template_part('template-parts/global-sns') ?>
 		</nav>
 	</header>

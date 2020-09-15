@@ -19,9 +19,9 @@ get_header();
 		<div class="people">
       <section class="l-mainVisual">
         <picture class="catch__mainVisualPicture">
-          <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/people/mv-sp.webp" media="(max-width: 480px)" type="image/webp">
+          <!-- <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/people/mv-sp.webp" media="(max-width: 480px)" type="image/webp"> -->
           <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/people/mv.webp" media="(min-width: 481px)" type="image/webp">
-          <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/people/mv-sp.jpg" media="(max-width: 480px)">
+          <!-- <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/people/mv-sp.jpg" media="(max-width: 480px)"> -->
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/people/mv.jpg" alt="">
         </picture>
       </section>
