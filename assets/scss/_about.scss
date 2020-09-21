@@ -1,0 +1,278 @@
+@import "_variables";
+
+.about {
+  &__message {
+    width: $--content-width-sm;
+    margin: 40px auto;
+  }
+
+  &__messageHeadline {
+    margin: 0;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 50px;
+    font-style: italic;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 6px;
+  }
+
+  &__messageContents {
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    margin: 40px auto 0;
+
+    img {
+      width: 464px;
+    }
+  }
+
+  &__messageText {
+    width: 464px;
+    margin: 0 0 0 40px;
+    font-weight: 600;
+    font-feature-settings: "palt";
+  }
+
+  &__messageLead {
+    margin: 12px 0 0;
+    font-size: 20px;
+    line-height: 1.75;
+    letter-spacing: 3px;
+  }
+
+  &__messageContent {
+    margin: 24px 0 0;
+    font-size: 15px;
+    line-height: 2;
+    letter-spacing: 1px;
+  }
+
+  &__messageCeoName {
+    display: block;
+    margin: 40px 0 0;
+    font-size: 15px;
+    letter-spacing: 2px;
+  }
+
+  &__service {
+    position: relative;
+    margin: 88px 0 0;
+  }
+
+  &__servicePicture {
+    position: absolute;
+    z-index: -1;
+  }
+
+  &__headline {
+    padding: 60px 0 0;
+    margin: 0;
+    font-size: 50px;
+    font-style: italic;
+    color: $white;
+    text-align: center;
+    letter-spacing: 5px;
+
+    &.-history {
+      margin: 0 0 72px;
+    }
+  }
+
+  &__serviceList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: $--content-width-sm;
+    padding: 80px 80px 0;
+    margin: 64px auto;
+    counter-reset: service-num 0;
+    background-color: $white;
+    box-shadow: 0px 0px 13.14px 4.86px rgba(0, 0, 0, 0.1);
+  }
+
+  &__serviceItem {
+    position: relative;
+    width: 44%;
+    margin: 0 0 100px;
+
+    &:nth-last-child(2),
+    &:last-child {
+      margin: 0 0 64px;
+    }
+  }
+
+  &__serviceIcon {
+    text-align: center;
+
+    svg {
+      width: 220px;
+    }
+  }
+
+  &__serviceHeadline {
+    position: absolute;
+    margin: 0;
+    font-family: "Ubuntu", sans-serif;
+    font-style: italic;
+  }
+
+  &__serviceHeadlineNumWrapper {
+    display: block;
+    margin-bottom: -4px;
+    line-height: 1.5;
+  }
+
+  &__serviceHeadlineNum,
+  &__serviceHeadlineName {
+    padding: 1px 6px;
+    font-size: 18px;
+    line-height: 1;
+    color: $white;
+    letter-spacing: 2px;
+    background-color: $black;
+  }
+
+  &__serviceSubHeadline {
+    margin: 16px 0 0;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 4px;
+  }
+
+  &__serviceParagraph {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.6;
+  }
+
+  &__company {
+    padding: 12px 0 360px;
+    background-color: $black;
+  }
+
+  &__companyHeadline {
+    margin: 0;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 50px;
+    font-style: italic;
+    color: $white;
+    letter-spacing: 5px;
+  }
+
+  .labelValue {
+    background-color: #1a1a1a;
+
+    &__row {
+      &:first-of-type {
+        margin: 24px 0 0;
+      }
+    }
+
+    &__label {
+      color: $black;
+      background-color: $white;
+    }
+
+    &__value {
+      color: $white;
+      letter-spacing: 2px;
+    }
+  }
+
+  &__clientList {
+    margin: 0;
+  }
+
+  &__clientItem {
+    &::before {
+      content: "・";
+    }
+  }
+
+  &__history {
+    margin: -336px 0 0;
+  }
+
+  &__historyImage {
+    display: block;
+    text-align: center;
+
+    img {
+      width: $--content-width-sm;
+    }
+  }
+
+  &__historyParagraph {
+    width: $--content-width-sm;
+    padding: 0 100px;
+    margin: 48px auto 0;
+    font-weight: 600;
+    line-height: 2;
+  }
+
+  &__historyYearBlock {
+    width: $--content-width-sm;
+    margin: 0 auto;
+  }
+
+  &__historyYear {
+    position: relative;
+    padding: 24px 0 24px 32px;
+    margin: 48px 48px 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: $white;
+    letter-spacing: 1px;
+    background-color: $black;
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: 48px;
+      width: 14px;
+      height: 19px;
+      content: "";
+      background-image: url(assets/img/icons/icon_angle.png);
+      background-size: cover;
+      transform: translateY(-50%) rotate(90deg);
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__historyContents {
+    width: $--content-width-sm;
+    padding: 0 96px;
+    margin: 12px auto 0;
+
+    dl {
+      display: flex;
+      padding: 26px 0 26px 6px;
+      margin: 0;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      border-bottom: 1px solid $black;
+    }
+
+    dd {
+      margin-left: 112px;
+      line-height: 2;
+    }
+  }
+
+  &__contact {
+    width: $--content-width-sm;
+    margin: 88px auto 148px;
+    background-color: $black;
+    box-shadow: 0px 0px 13.14px 4.86px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@include mq(mobile) {
+  .about {
+  }
+}

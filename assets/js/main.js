@@ -16,7 +16,7 @@ jQuery(function() {
   heroBottom;
 
   _window.on("scroll", function () {
-    heroBottom = 94;
+    heroBottom = 84;
     if (_window.scrollTop() > heroBottom) {
       _header.addClass("-fixed");
     } else {
@@ -51,20 +51,5 @@ jQuery(function() {
     }
     jQuery(this).toggleClass('-opened')
     jQuery(".header__trigger").toggleClass('active');
-  });
-
-  // fadein
-  jQuery(function () {
-    jQuery(window).scroll(function () {
-      jQuery(".fadein").each(function () {
-        var elemPos = jQuery(this).offset().top;
-        var scroll = jQuery(window).scrollTop();
-        var windowHeight = jQuery(window).height();
-        if (scroll > elemPos - windowHeight + 100) {
-          jQuery(this).addClass("scrollin");
-        }
-      });
-    });
-    jQuery(window).scroll();
   });
 })

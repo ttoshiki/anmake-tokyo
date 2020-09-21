@@ -32,6 +32,11 @@ ol {
 
 a {
   text-decoration: none;
+  transition: all 0.2s;
+
+  &:hover {
+    opacity: 0.6;
+  }
 }
 
 img {
@@ -55,8 +60,15 @@ textarea {
   appearance: none;
 }
 
-.roboto {
-  font-family: "Roboto", sans-serif;
+hr {
+  height: 0px;
+  margin: 6px auto;
+  border: none;
+  border-top: 1px solid $black;
+}
+
+address {
+  font-style: normal;
 }
 
 .screen-reader-text {

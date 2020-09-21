@@ -9,6 +9,10 @@
   }
 }
 
+.custom-logo-link:hover {
+  opacity: 1;
+}
+
 .menu-menu-1-container {
   .menu {
     display: flex;
@@ -17,6 +21,205 @@
     & > li {
       &:not(:first-child) {
         margin: 0 0 0 40px;
+      }
+    }
+  }
+}
+
+.page__title {
+  position: relative;
+  max-width: $--content-width-sm;
+  padding: 12px 0 12px 24px;
+  margin: -38px auto 0;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 30px;
+  font-style: italic;
+  font-weight: 600;
+  color: $white;
+  letter-spacing: 6px;
+  background-color: $black;
+}
+
+.divider {
+  max-width: $--content-width-sm;
+}
+
+.related {
+  &__list {
+    display: grid;
+    grid-template-rows: 260px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 40px;
+    margin: 32px 0 88px;
+  }
+
+  &__itemInner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    img {
+      height: 100%;
+      box-shadow: 0px 0px 13.14px 4.86px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &__thumbnail {
+    display: flex;
+    align-items: center;
+    height: 200px;
+    object-fit: cover;
+    background-color: $black;
+  }
+
+  &__title,
+  &__category {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 600;
+    color: $black;
+    letter-spacing: 1px;
+  }
+
+  &__title {
+    margin: 12px 0 0;
+  }
+}
+
+.labelValue {
+  width: $--content-width-sm;
+  padding: 40px 48px 56px;
+  margin: 80px auto 0;
+  border: 1px solid $black;
+
+  &__row {
+    display: flex;
+    align-items: flex-start;
+
+    &:first-of-type {
+      margin: 48px 0 0;
+    }
+
+    &:not(:first-of-type) {
+      margin: 40px 0 0;
+    }
+  }
+
+  &__label {
+    min-width: 300px;
+    margin: 6px 0 0;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 1;
+    color: $white;
+    letter-spacing: 2px;
+    background-color: $black;
+  }
+
+  &__value {
+    margin: 0 0 0 56px;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 2;
+    letter-spacing: 1px;
+  }
+}
+
+.wpcf7 {
+  margin: 48px auto 0;
+}
+
+.wpcf7-form {
+  padding: 0 100px 80px;
+}
+
+span.wpcf7-list-item {
+  margin: 2px 0;
+  font-size: 15px;
+  font-weight: 600;
+
+  &:not(:last-child) {
+    margin-right: 6px;
+  }
+}
+
+.wpcf7-list-item-label {
+  color: $white;
+  letter-spacing: 1px;
+}
+
+.wpcf7-form-control-wrap,
+select,
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+  width: 100%;
+  font-size: 15px;
+  border: none;
+}
+
+select,
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+  padding: 12px 0 12px 12px;
+
+  &::placeholder {
+    color: #777777;
+  }
+}
+
+.wpcf7 form .wpcf7-response-output {
+  padding: 12px;
+  color: $white;
+}
+
+.form {
+  &__itemWrapper {
+    &:not(:first-of-type) {
+      margin: 30px 0 0;
+    }
+  }
+
+  &__item {
+    display: flex;
+
+    &.-verticalCenter {
+      align-items: center;
+    }
+  }
+
+  &__headline {
+    min-width: 21%;
+    font-weight: 600;
+    color: $white;
+    letter-spacing: 2px;
+  }
+
+  &__submit {
+    margin: 48px 0 0;
+    text-align: center;
+
+    input {
+      padding: 14px 60px;
+      font-size: 16px;
+      font-weight: 600;
+      color: $white;
+      text-indent: 24px;
+      letter-spacing: 24px;
+      background-color: transparent;
+      border: 1px solid $white;
+      transition: 0.2s;
+
+      &:hover {
+        color: $black;
+        cursor: pointer;
+        background-color: $white;
       }
     }
   }

@@ -25,8 +25,8 @@ get_header();
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/people/mv.jpg" alt="">
         </picture>
       </section>
-      <section>
-        <h1 class=""><?php echo $cp_slug = get_query_var('post_type'); ?></h1>
+      <h1 class="page__title"><?php echo strtoupper($cp_slug = get_query_var('post_type')); ?></h1>
+      <section class="people__list">
         <?php
           $args = array(
             'post_type' => 'people',
@@ -40,50 +40,53 @@ get_header();
           );
           $the_query = new WP_Query($args); if ($the_query->have_posts()):
         ?>
-        <h2 class="people__inhouseOrOutsourced">
-          CREATORS<br>
-          IN<br>
-          HOUSE
-        </h2>
-        <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
-          <?php
-            if ( has_post_thumbnail() ) {
-              the_post_thumbnail();
-            }
-          ?>
-        <?php endwhile; ?>
-        <?php wp_reset_postdata(); ?>
-        <?php else: ?>
-        <?php endif; ?>
 
-        <?php
-          $args = array(
-            'post_type' => 'people',
-            'tax_query' => array(
-              array(
-                'taxonomy' => 'in_house_or_outsourced',
-                'field' => 'slug',
-                'terms' => 'outsourced',
-              )
-            )
-          );
-          $the_query = new WP_Query($args); if ($the_query->have_posts()):
-        ?>
-        <h2 class="people__inhouseOrOutsourced">
-          CREATORS<br>
-          IN<br>
-          HOUSE
-        </h2>
-        <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
+        <div class="people__position">
+          <h2 class="people__category">
+            CREATORS<br>
+            IN<br>
+            HOUSE
+          </h2>
+          <div class="people__thumbnail">
+            <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
+              <?php if (has_post_thumbnail()) { ?>
+                <a href="<?php the_permalink(); ?>">
+                  <?php the_post_thumbnail(); } ?>
+                </a>
+            <?php endwhile; ?>
+            <?php wp_reset_postdata(); ?>
+            <?php else: ?>
+            <?php endif; ?>
+          </div>
+        </div>
+
+        <div class="people__position">
           <?php
-            if ( has_post_thumbnail() ) {
-              the_post_thumbnail();
-            }
+            $args = array(
+              'post_type' => 'people',
+              'tax_query' => array(
+                array(
+                  'taxonomy' => 'in_house_or_outsourced',
+                  'field' => 'slug',
+                  'terms' => 'outsourced',
+                )
+              )
+            );
+            $the_query = new WP_Query($args); if ($the_query->have_posts()):
           ?>
-        <?php endwhile; ?>
-        <?php wp_reset_postdata(); ?>
-        <?php else: ?>
-        <?php endif; ?>
+          <h2 class="people__category">CREATORS</h2>
+          <div class="people__thumbnail">
+            <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
+              <?php if ( has_post_thumbnail() ) { ?>
+                <a href="<?php the_permalink(); ?>">
+                  <?php the_post_thumbnail(); } ?>
+                </a>
+            <?php endwhile; ?>
+            <?php wp_reset_postdata(); ?>
+            <?php else: ?>
+            <?php endif; ?>
+          </div>
+        </div>
       </section>
 		</div>
 	</main><!-- #main -->

@@ -1,0 +1,54 @@
+@import "_variables";
+
+.people {
+  &__list {
+    margin: 72px 0;
+  }
+
+  &__position {
+    display: flex;
+    align-items: flex-start;
+    max-width: $--content-width-sm;
+    margin: 0 auto;
+
+    &:not(:first-of-type) {
+      margin-top: 12px;
+    }
+  }
+
+  &__category {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 240px;
+    height: 240px;
+    padding: 0 24px;
+    margin: 0 12px 0 0;
+    font-family: "Ubuntu", sans-serif;
+    font-style: italic;
+    font-weight: 600;
+    color: $white;
+    text-align: center;
+    letter-spacing: 4px;
+    background-color: $black;
+  }
+
+  &__thumbnail {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 12px;
+    grid-column-gap: 12px;
+
+    img {
+      width: 240px;
+      height: 240px;
+      object-fit: cover;
+      vertical-align: bottom;
+    }
+  }
+}
+
+@include mq(mobile) {
+  .archive {
+  }
+}

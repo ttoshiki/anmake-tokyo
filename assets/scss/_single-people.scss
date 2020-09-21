@@ -1,0 +1,111 @@
+@import "_variables";
+
+.singlePeople {
+  &__wrapper {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    max-width: $--content-width-sm;
+    margin: 72px auto;
+
+    .attachment-post-thumbnail {
+      width: 54%;
+      height: auto;
+    }
+  }
+
+  &__metaData {
+    margin: 0 48px 0 0;
+  }
+
+  &__personalInfo {
+    display: flex;
+  }
+
+  &__category {
+    padding: 26px 14px;
+    margin: 0;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 600;
+    color: $white;
+    text-align: center;
+    letter-spacing: 2px;
+    background-color: $gray;
+  }
+
+  &__position {
+    text-transform: uppercase;
+  }
+
+  &__name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 0 0 30px;
+  }
+
+  &__nameKanji {
+    margin: 0;
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+
+  &__position {
+    margin: 4px 0 0;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 17px;
+    font-style: italic;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  &__contents {
+    margin: 32px 0 0;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 2;
+    font-feature-settings: "palt";
+  }
+
+  &__sns {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+
+    svg {
+      width: 26px;
+    }
+
+    .twitter-path,
+    .instagram-path,
+    .fb-path {
+      fill: $black;
+    }
+
+    a {
+      display: inline-flex;
+
+      &:not(:first-child) {
+        margin-left: 28px;
+      }
+    }
+  }
+
+  &__works {
+    width: $--content-width-sm;
+    margin: 40px auto 64px;
+  }
+
+  &__headline {
+    margin: 0;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 3px;
+  }
+}

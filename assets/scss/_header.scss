@@ -16,6 +16,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    min-width: $--content-width-sm;
 
     a {
       font-family: "Ubuntu", sans-serif;
@@ -32,5 +33,17 @@
       width: 20px;
       margin: 0 12px;
     }
+  }
+
+  .custom-logo-link {
+    height: 40px;
+  }
+
+  &.-fixed {
+    position: fixed;
+    z-index: 200;
+    padding: 24px 40px;
+    margin: 0 auto;
+    background-color: rgba($color: #000000, $alpha: 0.9);
   }
 }

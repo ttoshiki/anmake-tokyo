@@ -11,17 +11,19 @@
 
 ?>
 
-	<div class="contactButtonWrapper">
-		<a href="" class="contactButton">
-			CONTACT
-			<picture class="contactButton__icon">
-				<source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/icons/icon_angle.webp" type="image/webp">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/icon_angle.png" alt="">
-			</picture>
-		</a>
+	<?php if(!is_page('about')): ?>
+		<div class="contactButtonWrapper">
+			<a href="" class="contactButton">
+				CONTACT
+				<picture class="contactButton__icon">
+					<source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/icons/icon_angle.webp" type="image/webp">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/icon_angle.png" alt="">
+				</picture>
+			</a>
+		</div>
+	<?php endif; ?>
 
-	</div>
-	<footer id="site-footer" class="footer">
+	<footer id="site-footer" class="footer<?php if(!is_page('about')){ echo ' -hasContactLink'; } ?>">
 		<div class="footer__area">
 			<div class="footer__logo">
 				<?php the_custom_logo(); ?>

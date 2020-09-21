@@ -151,6 +151,10 @@ function anmake_tokyo_scripts()
 
     wp_enqueue_script('anmake-tokyo-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
 
+    wp_enqueue_script('jquery');
+
+    wp_enqueue_script('main-script', get_template_directory_uri() . '/assets/js/main.js', array(), '', true);
+
     if (is_singular() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
     }
@@ -173,9 +177,3 @@ function twpp_enqueue_styles()
 add_action('wp_enqueue_scripts', 'twpp_enqueue_styles');
 
 
-/**
- * Load Jetpack compatibility file.
- */
-if (defined('JETPACK__VERSION')) {
-    require get_template_directory() . '/inc/jetpack.php';
-}
