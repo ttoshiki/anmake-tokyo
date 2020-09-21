@@ -1136,6 +1136,7 @@ textarea::placeholder {
 
 .about__historyYear {
   position: relative;
+  z-index: 10;
   padding: 24px 0 24px 32px;
   margin: 48px 48px 0;
   font-size: 15px;
@@ -1154,11 +1155,16 @@ textarea::placeholder {
   content: "";
   background-image: url(assets/img/icons/icon_angle.png);
   background-size: cover;
-  transform: translateY(-50%) rotate(90deg);
+  transition: all 0.2s;
+  transform: translateY(-50%) rotate(-90deg);
 }
 
 .about__historyYear:hover {
   cursor: pointer;
+}
+
+.about__historyYear.-opened::after {
+  transform: translateY(-50%) rotate(90deg);
 }
 
 .about__historyContents {
@@ -1183,6 +1189,11 @@ textarea::placeholder {
 }
 
 .about__contact {
+  padding-top: 24px;
+  margin-top: -24px;
+}
+
+.about__contactInner {
   width: 1000px;
   margin: 88px auto 148px;
   background-color: #000000;
@@ -1340,7 +1351,9 @@ textarea::placeholder {
 }
 
 .works__category {
+  padding: 88px;
   margin: 36px 0 0;
+  margin: -52px;
   font-family: "Ubuntu", sans-serif;
   font-size: 30px;
   font-style: italic;

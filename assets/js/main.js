@@ -52,4 +52,14 @@ jQuery(function() {
     jQuery(this).toggleClass('-opened')
     jQuery(".header__trigger").toggleClass('active');
   });
+
+  // historyの内容toggle
+  jQuery(".about__historyYear").on("click", function() {
+    if (jQuery(this).hasClass('-opened')) {
+      jQuery(this).next().slideUp();
+    } else {
+      jQuery(this).next().slideDown();
+    }
+    jQuery(this).toggleClass('-opened');
+  })
 })

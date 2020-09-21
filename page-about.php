@@ -224,7 +224,7 @@ get_header();
           現在はその経験を活かし、PR映像、YouTube映像制作、VR映像制作、SNS運営等、様々なジャンルに展開。常に新しいクリエイティブを追求し、映像制作を行なっている。
         </p>
         <div class="about__historyYearBlock">
-          <h3 class="about__historyYear">2019年</h3>
+          <h3 class="about__historyYear -opened">2019年</h3>
           <div class="about__historyContents">
             <dl>
               <dt>2月</dt>
@@ -258,8 +258,8 @@ get_header();
             </dl>
           </div>
         </div>
-        <div class="about__historyYearBlock">
-          <h3 class="about__historyYear">2020年</h3>
+        <div class="about__historyYearBlock ">
+          <h3 class="about__historyYear -opened">2020年</h3>
           <div class="about__historyContents">
             <dl>
               <dt>2月</dt>
@@ -272,8 +272,10 @@ get_header();
         </div>
       </section>
       <section class="about__contact" id="contact">
-        <h2 class="about__headline">CONTACT</h2>
-        <?php echo do_shortcode('[contact-form-7 id="5" title="コンタクトフォーム 1"]'); ?>
+        <div class="about__contactInner">
+          <h2 class="about__headline">CONTACT</h2>
+          <?php echo do_shortcode('[contact-form-7 id="5" title="コンタクトフォーム 1"]'); ?>
+        </div>
       </section>
 		</div>
 	</main><!-- #main -->
