@@ -224,3 +224,9 @@ textarea {
     }
   }
 }
+
+@include mq(mobile) {
+  .menu-menu-1-container .menu {
+    flex-wrap: wrap;
+  }
+}

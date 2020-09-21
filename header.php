@@ -38,6 +38,7 @@
 					));
 					?>
 				</div>
+				<?php echo get_template_part('template-parts/global-sns'); ?>
 			</div>
 		</div>
 		<nav class="header__nav -pc">
@@ -49,6 +50,6 @@
 						'theme_location' => 'primary'
 				));
       ?>
-			<?php echo get_template_part('template-parts/global-sns') ?>
+			<?php echo get_template_part('template-parts/global-sns'); ?>
 		</nav>
 	</header>

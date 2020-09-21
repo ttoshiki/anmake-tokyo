@@ -35,23 +35,24 @@ jQuery(function() {
   }
 
   // spメニューOPEN
-  jQuery(".header__trigger").on('click', function() {
-    if ((jQuery(this)).hasClass("-opened")) {
-      jQuery(".header__hammenuWrapper").fadeOut(300);
-    } else {
-      jQuery(".header__hammenuWrapper").fadeIn(300);
-      jQuery(".header__hammenuWrapper").css('display', 'flex');
-    }
-    if (!(jQuery("#header").hasClass("-fixed"))) {
-      jQuery(".header").addClass('-fixed');
-    } else {
-      if (_window.scrollTop() < 94) {
-        jQuery("header").removeClass("-fixed");
-      }
-    }
-    jQuery(this).toggleClass('-opened')
-    jQuery(".header__trigger").toggleClass('active');
-  });
+    jQuery(".header__trigger").on('click', function() {
+        if ((jQuery(this)).hasClass("-opened")) {
+            jQuery(".header__hammenuWrapper").fadeOut(300);
+            jQuery(".header").addClass('-opened');
+        } else {
+            jQuery(".header__hammenuWrapper").fadeIn(300);
+            jQuery(".header__hammenuWrapper").css('display', 'flex');
+        }
+        if (!(jQuery(".header").hasClass("-opened"))) {
+            jQuery(".header").addClass('-opened');
+        } else {
+            jQuery(".header").removeClass('-opened');
+        }
+        if (_window.scrollTop() < 60 && !(jQuery(".header__trigger").hasClass("-opened"))) {
+            jQuery(".header").removeClass("-fixed");
+        }
+        jQuery(this).toggleClass('-opened')
+    });
 
   // historyの内容toggle
   jQuery(".about__historyYear").on("click", function() {

@@ -100,3 +100,14 @@
     letter-spacing: 2px;
   }
 }
+
+@include mq(mobile) {
+  .contactButton {
+    width: 100%;
+    font-size: 24px;
+  }
+
+  .footer {
+    min-width: auto;
+  }
+}

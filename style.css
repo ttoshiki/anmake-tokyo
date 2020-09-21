@@ -332,6 +332,12 @@ textarea::placeholder {
   background-color: #ffffff;
 }
 
+@media screen and (max-width: 480px) {
+  .menu-menu-1-container .menu {
+    flex-wrap: wrap;
+  }
+}
+
 .l-mainVisual {
   position: relative;
 }
@@ -536,6 +542,117 @@ textarea::placeholder {
   background-color: rgba(0, 0, 0, 0.9);
 }
 
+@media screen and (max-width: 480px) {
+  .header {
+    padding: 6px 6px 0 24px;
+    margin: 0;
+  }
+  .header__nav.-pc {
+    display: none;
+  }
+  .header__hammenuWrapper {
+    position: fixed;
+    top: 59px;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: calc(100vh - 52px);
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  .header__hammenu {
+    top: 2px;
+    left: 0;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .header.-fixed, .header.-opened {
+    position: fixed;
+    background-color: #000000;
+  }
+  .header.-fixed {
+    padding: 6px 6px 0 24px;
+  }
+  .header__trigger,
+  .header__trigger span {
+    box-sizing: border-box;
+    display: inline-block;
+    transition: all 0.4s;
+  }
+  .header__trigger {
+    position: relative;
+    width: 52px;
+    height: 52px;
+  }
+  .header__trigger span {
+    position: absolute;
+    left: 50%;
+    width: 26px;
+    height: 2px;
+    background-color: #fff;
+  }
+  .header__trigger span:first-of-type {
+    transform: translate(-50%, 16px);
+  }
+  .header__trigger span:nth-of-type(2) {
+    top: 48%;
+    transform: translate(-50%, -50%);
+  }
+  .header__trigger span:nth-of-type(3) {
+    transform: translate(-50%, 32px);
+  }
+  .header__trigger.-opened span:nth-of-type(1) {
+    background-color: #ffffff;
+    transform: translate(-12px, 22px) rotate(-45deg);
+  }
+  .header__trigger.-opened span:nth-of-type(2) {
+    opacity: 0;
+  }
+  .header__trigger.-opened span:nth-of-type(3) {
+    background-color: #ffffff;
+    transform: translate(-12px, 22px) rotate(45deg);
+  }
+  .header .custom-logo {
+    width: 180px;
+  }
+  .header .custom-logo-link {
+    height: 30px;
+  }
+  .header .globalSns {
+    margin: 100px 0 0;
+  }
+  .header .globalSns svg {
+    width: 24px;
+    margin: 0 16px;
+  }
+  .header .twitter-path,
+  .header .instagram-path,
+  .header .fb-path {
+    fill: #000000;
+  }
+  .header .menu {
+    flex-direction: column;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 3px;
+  }
+  .header .menu > li:not(:first-child) {
+    margin: 40px 0 0 0;
+  }
+  .header .menu a {
+    color: #000000;
+    letter-spacing: 4px;
+  }
+}
+
 .contactButton {
   position: relative;
   z-index: 10;
@@ -635,6 +752,16 @@ textarea::placeholder {
   font-family: "Ubuntu", sans-serif;
   color: #ffffff;
   letter-spacing: 2px;
+}
+
+@media screen and (max-width: 480px) {
+  .contactButton {
+    width: 100%;
+    font-size: 24px;
+  }
+  .footer {
+    min-width: auto;
+  }
 }
 
 .not-found {

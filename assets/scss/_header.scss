@@ -47,3 +47,139 @@
     background-color: rgba($color: #000000, $alpha: 0.9);
   }
 }
+
+@include mq(mobile) {
+  .header {
+    padding: 6px 6px 0 24px;
+    margin: 0;
+
+    &__nav {
+      &.-pc {
+        display: none;
+      }
+    }
+
+    &__hammenuWrapper {
+      position: fixed;
+      top: 59px;
+      left: 0;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100vw;
+      height: calc(100vh - 52px);
+      background-color: rgba($color: $white, $alpha: 0.9);
+    }
+
+    &__hammenu {
+      top: 2px;
+      left: 0;
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    &.-fixed,
+    &.-opened {
+      position: fixed;
+      background-color: $black;
+    }
+
+    &.-fixed {
+      padding: 6px 6px 0 24px;
+    }
+
+    &__trigger,
+    &__trigger span {
+      box-sizing: border-box;
+      display: inline-block;
+      transition: all 0.4s;
+    }
+
+    &__trigger {
+      position: relative;
+      width: 52px;
+      height: 52px;
+    }
+
+    &__trigger span {
+      position: absolute;
+      left: 50%;
+      width: 26px;
+      height: 2px;
+      background-color: #fff;
+
+      &:first-of-type {
+        transform: translate(-50%, 16px);
+      }
+
+      &:nth-of-type(2) {
+        top: 48%;
+        transform: translate(-50%, -50%);
+      }
+
+      &:nth-of-type(3) {
+        transform: translate(-50%, 32px);
+      }
+    }
+
+    &__trigger.-opened span:nth-of-type(1) {
+      background-color: $white;
+      transform: translate(-12px, 22px) rotate(-45deg);
+    }
+    &__trigger.-opened span:nth-of-type(2) {
+      opacity: 0;
+    }
+    &__trigger.-opened span:nth-of-type(3) {
+      background-color: $white;
+      transform: translate(-12px, 22px) rotate(45deg);
+    }
+
+    .custom-logo {
+      width: 180px;
+    }
+
+    .custom-logo-link {
+      height: 30px;
+    }
+
+    .globalSns {
+      margin: 100px 0 0;
+
+      svg {
+        width: 24px;
+        margin: 0 16px;
+      }
+    }
+
+    .twitter-path,
+    .instagram-path,
+    .fb-path {
+      fill: $black;
+    }
+
+    .menu {
+      flex-direction: column;
+      font-family: "Ubuntu", sans-serif;
+      font-size: 28px;
+      font-style: italic;
+      font-weight: 600;
+      text-align: center;
+      letter-spacing: 3px;
+
+      & > li {
+        &:not(:first-child) {
+          margin: 40px 0 0 0;
+        }
+      }
+
+      a {
+        color: $black;
+        letter-spacing: 4px;
+      }
+    }
+  }
+}
