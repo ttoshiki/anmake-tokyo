@@ -49,6 +49,36 @@
 }
 
 @include mq(mobile) {
-  .archive {
+  .people {
+    &__list {
+      margin: 40px 0;
+    }
+
+    &__position {
+      flex-direction: column;
+
+      &:not(:first-of-type) {
+        margin-top: 40px;
+      }
+    }
+
+    &__category {
+      width: 92%;
+      height: 88px;
+      margin: 0 auto;
+      font-size: 20px;
+      letter-spacing: 3px;
+    }
+
+    &__thumbnail {
+      grid-template-columns: 1fr 1fr;
+      width: 92%;
+      margin: 24px auto 0;
+
+      img {
+        width: 168px;
+        height: 168px;
+      }
+    }
   }
 }

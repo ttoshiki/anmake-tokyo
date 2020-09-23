@@ -390,6 +390,9 @@ textarea::placeholder {
   textarea {
     font-size: 16px;
   }
+  .divider {
+    width: 92%;
+  }
 }
 
 .l-mainVisual {
@@ -810,8 +813,16 @@ textarea::placeholder {
 
 @media screen and (max-width: 480px) {
   .contactButton {
-    width: 100%;
+    width: 92%;
+    padding: 18px 0 18px 32px;
     font-size: 24px;
+  }
+  .contactButton__icon {
+    right: 32px;
+    height: 30px;
+  }
+  .contactButton__icon img {
+    width: 18px;
   }
   .footer {
     min-width: auto;
@@ -1654,6 +1665,34 @@ textarea::placeholder {
   vertical-align: bottom;
 }
 
+@media screen and (max-width: 480px) {
+  .people__list {
+    margin: 40px 0;
+  }
+  .people__position {
+    flex-direction: column;
+  }
+  .people__position:not(:first-of-type) {
+    margin-top: 40px;
+  }
+  .people__category {
+    width: 92%;
+    height: 88px;
+    margin: 0 auto;
+    font-size: 20px;
+    letter-spacing: 3px;
+  }
+  .people__thumbnail {
+    grid-template-columns: 1fr 1fr;
+    width: 92%;
+    margin: 24px auto 0;
+  }
+  .people__thumbnail img {
+    width: 168px;
+    height: 168px;
+  }
+}
+
 .works__gallery {
   width: 1000px;
   margin: 0 auto;
@@ -1719,6 +1758,14 @@ textarea::placeholder {
   font-weight: 600;
   text-align: center;
   letter-spacing: 2px;
+}
+
+@media screen and (max-width: 480px) {
+  .works__list {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 124px;
+    margin: 24px 0 64px;
+  }
 }
 
 .singlePeople__wrapper {
@@ -1827,6 +1874,42 @@ textarea::placeholder {
   font-weight: 600;
   text-align: center;
   letter-spacing: 3px;
+}
+
+@media screen and (max-width: 480px) {
+  .singlePeople__wrapper {
+    flex-direction: column-reverse;
+    margin: 40px auto;
+  }
+  .singlePeople__wrapper .attachment-post-thumbnail {
+    width: 278px;
+    margin: 0 auto;
+  }
+  .singlePeople__metaData {
+    padding: 0 16px;
+    margin: 0 auto;
+  }
+  .singlePeople__personalInfo {
+    justify-content: center;
+    width: 278px;
+    margin: 24px auto 0;
+  }
+  .singlePeople__category {
+    padding: 24px 12px;
+    font-size: 14px;
+  }
+  .singlePeople__name {
+    margin: 0 0 0 24px;
+  }
+  .singlePeople__sns {
+    position: relative;
+    justify-content: center;
+    margin: 24px 0 0;
+  }
+  .singlePeople__works {
+    width: 92%;
+    margin: 32px auto 64px;
+  }
 }
 
 .singleWorks__movie {
