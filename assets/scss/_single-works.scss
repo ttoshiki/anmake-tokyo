@@ -117,6 +117,51 @@
 }
 
 @include mq(mobile) {
-  .singleWworks {
+  .singleWorks {
+    &__movie {
+      width: 92%;
+      margin: 40px auto 0;
+    }
+
+    &__divider {
+      width: 92%;
+    }
+
+    &__related {
+      width: 92%;
+      margin: 0 auto;
+    }
+
+    &__headline {
+      margin: 0 0 32px;
+    }
+
+    &__members {
+      justify-content: space-between;
+      width: 100%;
+      margin: 12px 0 0;
+    }
+
+    &__profile {
+      width: 46%;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      &:not(:first-of-type) {
+        margin-left: 0;
+      }
+    }
+
+    &__name {
+      margin: 6px 0 0;
+    }
+
+    &__photos {
+      width: 92%;
+      margin: 40px auto 72px;
+    }
   }
 }
