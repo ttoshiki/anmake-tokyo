@@ -109,5 +109,21 @@
 
   .footer {
     min-width: auto;
+    padding: 48px 0 32px;
+
+    &__logo {
+      img {
+        width: 224px;
+      }
+    }
+
+    &__links {
+      font-size: 15px;
+      letter-spacing: 1px;
+    }
+
+    &__copyrightWrapper {
+      margin: 32px 0 0;
+    }
   }
 }

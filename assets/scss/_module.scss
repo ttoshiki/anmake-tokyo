@@ -226,7 +226,79 @@ textarea {
 }
 
 @include mq(mobile) {
-  .menu-menu-1-container .menu {
-    flex-wrap: wrap;
+  .menu-menu-1-container {
+    .menu {
+      flex-wrap: wrap;
+      margin: 0 16px;
+
+      & > li:not(:first-child) {
+        margin: 0 0 0 24px;
+      }
+    }
+  }
+
+  .page__title {
+    width: 92%;
+    padding: 10px 0 10px 20px;
+    font-size: 24px;
+  }
+
+  .labelValue {
+    width: 88%;
+    margin: 32px auto 0;
+
+    &__row {
+      flex-direction: column;
+
+      &:not(:first-of-type) {
+        margin: 32px 0 0;
+      }
+    }
+
+    &__label {
+      min-width: 100%;
+      font-size: 18px;
+      letter-spacing: 1px;
+    }
+
+    &__value {
+      margin: 8px 0 0;
+      letter-spacing: 1px;
+    }
+  }
+
+  .wpcf7 {
+    margin: 40px auto 0;
+  }
+
+  .wpcf7-form {
+    padding: 0 16px 48px;
+  }
+
+  .form {
+    &__item {
+      flex-direction: column;
+
+      &.-verticalCenter {
+        align-items: flex-start;
+      }
+    }
+
+    &__headline {
+      min-width: auto;
+      margin: 0 0 8px;
+    }
+
+    &__submit {
+      margin: 40px 0 0;
+    }
+  }
+
+  select,
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  textarea {
+    font-size: 16px;
   }
 }

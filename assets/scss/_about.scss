@@ -287,5 +287,172 @@
 
 @include mq(mobile) {
   .about {
+    &__message {
+      width: 100%;
+      padding: 0 16px;
+      margin: 32px auto;
+    }
+
+    &__messageHeadline {
+      font-size: 40px;
+      letter-spacing: 5px;
+    }
+
+    &__messageContents {
+      flex-direction: column;
+      padding: 0;
+      margin: 16px auto 0;
+
+      img {
+        width: 76%;
+      }
+    }
+
+    &__messageLead {
+      margin: 24px 0 0;
+      font-size: 20px;
+      letter-spacing: 2px;
+    }
+
+    &__messageText {
+      width: 100%;
+      margin: 0;
+      font-size: 18px;
+    }
+
+    &__messageContent {
+      margin: 20px 0 0;
+    }
+
+    &__messageCeoName {
+      margin: 32px 0 0;
+    }
+
+    &__service {
+      margin: 64px 0 0;
+    }
+
+    &__headline {
+      padding: 40px 0 0;
+      font-size: 40px;
+      letter-spacing: 4px;
+
+      &.-history {
+        margin: 0 0 32px;
+      }
+    }
+
+    &__servicePicture {
+      img {
+        height: 180px;
+        object-fit: cover;
+      }
+    }
+
+    &__serviceList {
+      flex-direction: column;
+      align-items: center;
+      width: 92%;
+      padding: 64px 24px 0;
+      margin: 40px auto;
+    }
+
+    &__serviceItem {
+      width: 100%;
+      margin: 0 0 64px;
+    }
+
+    &__serviceIcon {
+      svg {
+        width: 168px;
+      }
+    }
+
+    &__serviceHeadline {
+      top: -16px;
+    }
+
+    &__serviceHeadlineNum,
+    &__serviceHeadlineName {
+      font-size: 16px;
+    }
+
+    &__serviceSubHeadline {
+      margin: 12px 0 0;
+      font-size: 18px;
+      letter-spacing: 2px;
+    }
+
+    &__serviceParagraph {
+      font-size: 14px;
+    }
+
+    &__companyHeadline {
+      font-size: 40px;
+    }
+
+    .labelValue {
+      padding: 20px 24px 24px;
+    }
+
+    &__company {
+      padding: 12px 0 240px;
+    }
+
+    &__history {
+      margin: -224px 0 0;
+    }
+
+    &__historyImage {
+      img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+      }
+    }
+
+    &__historyParagraph {
+      width: 100%;
+      padding: 0 40px;
+      margin: 24px auto 0;
+      line-height: 1.9;
+      text-align: justify;
+    }
+
+    &__historyYearBlock {
+      width: 92%;
+      margin: 40px auto 0;
+    }
+
+    &__historyYear {
+      padding: 16px 0 16px 24px;
+      margin: 40px 0 0;
+
+      &::after {
+        right: 32px;
+        width: 12px;
+        height: 16px;
+      }
+    }
+
+    &__historyContents {
+      width: 100%;
+      padding: 0 16px;
+
+      dl {
+        flex-direction: column;
+        padding: 20px 0 20px 6px;
+      }
+
+      dd {
+        margin: 6px 0 0;
+        line-height: 1.9;
+      }
+    }
+
+    &__contactInner {
+      width: 100%;
+      margin: 64px auto 106px;
+    }
   }
 }

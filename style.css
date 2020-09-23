@@ -335,6 +335,60 @@ textarea::placeholder {
 @media screen and (max-width: 480px) {
   .menu-menu-1-container .menu {
     flex-wrap: wrap;
+    margin: 0 16px;
+  }
+  .menu-menu-1-container .menu > li:not(:first-child) {
+    margin: 0 0 0 24px;
+  }
+  .page__title {
+    width: 92%;
+    padding: 10px 0 10px 20px;
+    font-size: 24px;
+  }
+  .labelValue {
+    width: 88%;
+    margin: 32px auto 0;
+  }
+  .labelValue__row {
+    flex-direction: column;
+  }
+  .labelValue__row:not(:first-of-type) {
+    margin: 32px 0 0;
+  }
+  .labelValue__label {
+    min-width: 100%;
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+  .labelValue__value {
+    margin: 8px 0 0;
+    letter-spacing: 1px;
+  }
+  .wpcf7 {
+    margin: 40px auto 0;
+  }
+  .wpcf7-form {
+    padding: 0 16px 48px;
+  }
+  .form__item {
+    flex-direction: column;
+  }
+  .form__item.-verticalCenter {
+    align-items: flex-start;
+  }
+  .form__headline {
+    min-width: auto;
+    margin: 0 0 8px;
+  }
+  .form__submit {
+    margin: 40px 0 0;
+  }
+  select,
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  textarea {
+    font-size: 16px;
   }
 }
 
@@ -761,6 +815,17 @@ textarea::placeholder {
   }
   .footer {
     min-width: auto;
+    padding: 48px 0 32px;
+  }
+  .footer__logo img {
+    width: 224px;
+  }
+  .footer__links {
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
+  .footer__copyrightWrapper {
+    margin: 32px 0 0;
   }
 }
 
@@ -1325,6 +1390,138 @@ textarea::placeholder {
   margin: 88px auto 148px;
   background-color: #000000;
   box-shadow: 0px 0px 13.14px 4.86px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 480px) {
+  .about__message {
+    width: 100%;
+    padding: 0 16px;
+    margin: 32px auto;
+  }
+  .about__messageHeadline {
+    font-size: 40px;
+    letter-spacing: 5px;
+  }
+  .about__messageContents {
+    flex-direction: column;
+    padding: 0;
+    margin: 16px auto 0;
+  }
+  .about__messageContents img {
+    width: 76%;
+  }
+  .about__messageLead {
+    margin: 24px 0 0;
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+  .about__messageText {
+    width: 100%;
+    margin: 0;
+    font-size: 18px;
+  }
+  .about__messageContent {
+    margin: 20px 0 0;
+  }
+  .about__messageCeoName {
+    margin: 32px 0 0;
+  }
+  .about__service {
+    margin: 64px 0 0;
+  }
+  .about__headline {
+    padding: 40px 0 0;
+    font-size: 40px;
+    letter-spacing: 4px;
+  }
+  .about__headline.-history {
+    margin: 0 0 32px;
+  }
+  .about__servicePicture img {
+    height: 180px;
+    object-fit: cover;
+  }
+  .about__serviceList {
+    flex-direction: column;
+    align-items: center;
+    width: 92%;
+    padding: 64px 24px 0;
+    margin: 40px auto;
+  }
+  .about__serviceItem {
+    width: 100%;
+    margin: 0 0 64px;
+  }
+  .about__serviceIcon svg {
+    width: 168px;
+  }
+  .about__serviceHeadline {
+    top: -16px;
+  }
+  .about__serviceHeadlineNum, .about__serviceHeadlineName {
+    font-size: 16px;
+  }
+  .about__serviceSubHeadline {
+    margin: 12px 0 0;
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+  .about__serviceParagraph {
+    font-size: 14px;
+  }
+  .about__companyHeadline {
+    font-size: 40px;
+  }
+  .about .labelValue {
+    padding: 20px 24px 24px;
+  }
+  .about__company {
+    padding: 12px 0 240px;
+  }
+  .about__history {
+    margin: -224px 0 0;
+  }
+  .about__historyImage img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  .about__historyParagraph {
+    width: 100%;
+    padding: 0 40px;
+    margin: 24px auto 0;
+    line-height: 1.9;
+    text-align: justify;
+  }
+  .about__historyYearBlock {
+    width: 92%;
+    margin: 40px auto 0;
+  }
+  .about__historyYear {
+    padding: 16px 0 16px 24px;
+    margin: 40px 0 0;
+  }
+  .about__historyYear::after {
+    right: 32px;
+    width: 12px;
+    height: 16px;
+  }
+  .about__historyContents {
+    width: 100%;
+    padding: 0 16px;
+  }
+  .about__historyContents dl {
+    flex-direction: column;
+    padding: 20px 0 20px 6px;
+  }
+  .about__historyContents dd {
+    margin: 6px 0 0;
+    line-height: 1.9;
+  }
+  .about__contactInner {
+    width: 100%;
+    margin: 64px auto 106px;
+  }
 }
 
 .archive__list {
