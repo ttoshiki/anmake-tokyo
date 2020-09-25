@@ -38,7 +38,7 @@
 
   &__photos {
     width: $--content-width-sm;
-    margin: 48px auto 80px;
+    margin: 80px auto;
 
     img {
       &:not(:first-of-type) {
@@ -68,9 +68,10 @@
   &__profile {
     display: flex;
     flex-direction: column;
+    margin: 0 0 24px;
 
-    &:not(:first-of-type) {
-      margin-left: 24px;
+    &:not(:last-of-type) {
+      margin-right: 24px;
     }
 
     img {
@@ -80,10 +81,16 @@
     }
   }
 
+  .labelValue {
+    .-website {
+      margin: 16px 0 0;
+    }
+  }
+
   &__name {
     margin: 12px 0 0;
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 2px;
   }
 
@@ -91,7 +98,7 @@
     font-family: "Ubuntu", sans-serif;
     font-size: 13px;
     font-style: italic;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 1.5;
   }
 
@@ -110,7 +117,7 @@
     font-family: "Ubuntu", sans-serif;
     font-size: 30px;
     font-style: italic;
-    font-weight: 600;
+    font-weight: 700;
     text-align: center;
     letter-spacing: 4px;
   }
@@ -150,8 +157,8 @@
         height: auto;
       }
 
-      &:not(:first-of-type) {
-        margin-left: 0;
+      &:not(:last-of-type) {
+        margin-right: 0;
       }
     }
 
@@ -162,6 +169,17 @@
     &__photos {
       width: 92%;
       margin: 40px auto 72px;
+    }
+
+    .labelValue {
+      .-website {
+        margin: 8px 0 0;
+      }
+    }
+
+    .yarpp-related h3 {
+      font-size: 24px;
+      letter-spacing: 3px;
     }
   }
 }

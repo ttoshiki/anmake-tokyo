@@ -69,9 +69,37 @@ get_header();
                       break;
                       case '片寄 裕太郎':
                     ?>
-                        <img src="<?php $upload_dir = wp_upload_dir(); echo $upload_dir['baseurl']; ?>/2020/09/img_002@2x.jpg" alt="佐藤 遼太郎">
+                        <img src="<?php $upload_dir = wp_upload_dir(); echo $upload_dir['baseurl']; ?>/2020/09/img_002@2x.jpg" alt="片寄 裕太郎">
                         <span class="singleWorks__name">片寄 裕太郎</span>
                         <span class="singleWorks__position">DIRECTOR/DP</span>
+                    <?php
+                      break;
+                      case '高野 隼弥':
+                    ?>
+                        <img src="<?php $upload_dir = wp_upload_dir(); echo $upload_dir['baseurl']; ?>/2020/09/img_003@2x.jpg" alt="高野 隼弥">
+                        <span class="singleWorks__name">高野 隼弥</span>
+                        <span class="singleWorks__position">DIRECTOR</span>
+                    <?php
+                      break;
+                      case '八代 健翔':
+                    ?>
+                        <img src="<?php $upload_dir = wp_upload_dir(); echo $upload_dir['baseurl']; ?>/2020/09/img_004@2x.jpg" alt="八代 健翔">
+                        <span class="singleWorks__name">八代 健翔</span>
+                        <span class="singleWorks__position">DIRECTOR / DP</span>
+                    <?php
+                      break;
+                      case '堀沢 春香':
+                    ?>
+                        <img src="<?php $upload_dir = wp_upload_dir(); echo $upload_dir['baseurl']; ?>/2020/09/img_005@2x.jpg" alt="堀沢 春香">
+                        <span class="singleWorks__name">堀沢 春香</span>
+                        <span class="singleWorks__position">DIRECTOR</span>
+                    <?php
+                      break;
+                      case '松崎 竜也':
+                    ?>
+                        <img src="<?php $upload_dir = wp_upload_dir(); echo $upload_dir['baseurl']; ?>/2020/09/img_006@2x.jpg" alt="松崎 竜也">
+                        <span class="singleWorks__name">松崎 竜也</span>
+                        <span class="singleWorks__position">DIRECTOR</span>
                     <?php
                       break;
                     ?>
@@ -81,7 +109,7 @@ get_header();
               </dd>
             </dl>
             <?php if (get_field('website')): ?>
-              <dl class="labelValue__row">
+              <dl class="labelValue__row -website">
                 <dt class="labelValue__label">WEBSITE</dt>
                 <dd class="labelValue__value"><a href="<?php the_field('website'); ?>" class="singleWorks__link"><?php the_field('website'); ?></a></dd>
               </dl>

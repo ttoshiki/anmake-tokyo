@@ -274,7 +274,7 @@ get_header();
       <section class="about__contact" id="contact">
         <div class="about__contactInner">
           <h2 class="about__headline">CONTACT</h2>
-          <?php echo do_shortcode('[contact-form-7 id="5" title="コンタクトフォーム 1"]'); ?>
+          <?php echo do_shortcode('[contact-form-7 id="68" title="コンタクトフォーム 1"]'); ?>
         </div>
       </section>
 		</div>

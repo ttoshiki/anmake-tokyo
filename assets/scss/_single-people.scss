@@ -5,6 +5,7 @@
     position: relative;
     display: flex;
     align-items: flex-start;
+    justify-content: space-between;
     max-width: $--content-width-sm;
     margin: 72px auto;
 
@@ -28,7 +29,7 @@
     font-family: "Ubuntu", sans-serif;
     font-size: 15px;
     font-style: italic;
-    font-weight: 600;
+    font-weight: 700;
     color: $white;
     text-align: center;
     letter-spacing: 2px;
@@ -57,14 +58,14 @@
     font-family: "Ubuntu", sans-serif;
     font-size: 17px;
     font-style: italic;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 1px;
   }
 
   &__contents {
     margin: 32px 0 0;
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 2;
     font-feature-settings: "palt";
   }
@@ -104,7 +105,7 @@
     font-family: "Ubuntu", sans-serif;
     font-size: 30px;
     font-style: italic;
-    font-weight: 600;
+    font-weight: 700;
     text-align: center;
     letter-spacing: 3px;
   }
@@ -133,6 +134,10 @@
       margin: 24px auto 0;
     }
 
+    &__contents {
+      font-size: 14px;
+    }
+
     &__category {
       padding: 24px 12px;
       font-size: 14px;
@@ -145,12 +150,17 @@
     &__sns {
       position: relative;
       justify-content: center;
+      max-height: 26px;
       margin: 24px 0 0;
     }
 
     &__works {
       width: 92%;
       margin: 32px auto 64px;
+    }
+
+    &__headline {
+      font-size: 24px;
     }
   }
 }

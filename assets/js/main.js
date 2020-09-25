@@ -54,6 +54,12 @@ jQuery(function() {
         jQuery(this).toggleClass('-opened')
     });
 
+    // spメニューページ内リンク
+    jQuery(".header .menu a").on("click", function() {
+      jQuery(".header__hammenuWrapper").css('display', 'none');
+      jQuery(".header__trigger").removeClass('-opened');
+    })
+
   // historyの内容toggle
   jQuery(".about__historyYear").on("click", function() {
     if (jQuery(this).hasClass('-opened')) {

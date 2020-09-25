@@ -59,7 +59,7 @@
     font-family: "Ubuntu", sans-serif;
     font-size: 17px;
     font-style: italic;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 2px;
 
     ul {
@@ -104,8 +104,9 @@
 @include mq(mobile) {
   .contactButton {
     width: 92%;
-    padding: 18px 0 18px 32px;
-    font-size: 24px;
+    padding: 16px 0 16px 32px;
+    font-size: 22px;
+    letter-spacing: 4px;
 
     &__icon {
       right: 32px;
@@ -120,6 +121,7 @@
   .footer {
     min-width: auto;
     padding: 48px 0 32px;
+    margin: -40px 0 0;
 
     &__logo {
       img {
@@ -128,7 +130,7 @@
     }
 
     &__links {
-      font-size: 15px;
+      font-size: 13px;
       letter-spacing: 1px;
     }
 

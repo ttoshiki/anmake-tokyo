@@ -18,8 +18,7 @@ get_header();
 	<main id="primary" class="site-main">
 
 		<?php
-
-
+		echo do_shortcode('[rev_slider alias="shield"][/rev_slider]')
       ?>
 
 	</main><!-- #main -->

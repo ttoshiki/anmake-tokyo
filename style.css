@@ -117,6 +117,7 @@ address {
 .globalSns {
   display: flex;
   justify-content: center;
+  max-height: 20px;
 }
 
 .globalSnsLink {
@@ -144,7 +145,7 @@ address {
   font-family: "Ubuntu", sans-serif;
   font-size: 30px;
   font-style: italic;
-  font-weight: 600;
+  font-weight: 700;
   color: #ffffff;
   letter-spacing: 6px;
   background-color: #000000;
@@ -171,6 +172,7 @@ address {
 .related__itemInner img {
   height: 100%;
   box-shadow: 0px 0px 13.14px 4.86px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
 }
 
 .related__thumbnail {
@@ -185,7 +187,7 @@ address {
   font-family: "Ubuntu", sans-serif;
   font-size: 15px;
   font-style: italic;
-  font-weight: 600;
+  font-weight: 700;
   color: #000000;
   letter-spacing: 1px;
 }
@@ -220,7 +222,7 @@ address {
   font-family: "Ubuntu", sans-serif;
   font-size: 20px;
   font-style: italic;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1;
   color: #ffffff;
   letter-spacing: 2px;
@@ -230,7 +232,7 @@ address {
 .labelValue__value {
   margin: 0 0 0 56px;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 2;
   letter-spacing: 1px;
 }
@@ -246,7 +248,7 @@ address {
 span.wpcf7-list-item {
   margin: 2px 0;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 span.wpcf7-list-item:not(:last-child) {
@@ -304,7 +306,7 @@ textarea::placeholder {
 
 .form__headline {
   min-width: 21%;
-  font-weight: 600;
+  font-weight: 700;
   color: #ffffff;
   letter-spacing: 2px;
 }
@@ -317,7 +319,7 @@ textarea::placeholder {
 .form__submit input {
   padding: 14px 60px;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   color: #ffffff;
   text-indent: 24px;
   letter-spacing: 24px;
@@ -338,12 +340,13 @@ textarea::placeholder {
     margin: 0 16px;
   }
   .menu-menu-1-container .menu > li:not(:first-child) {
-    margin: 0 0 0 24px;
+    margin: 0 0 0 20px;
   }
   .page__title {
     width: 92%;
-    padding: 10px 0 10px 20px;
-    font-size: 24px;
+    padding: 8px 0 8px 18px;
+    font-size: 22px;
+    letter-spacing: 4px;
   }
   .labelValue {
     width: 92%;
@@ -389,6 +392,11 @@ textarea::placeholder {
   .form__submit {
     margin: 40px 0 0;
   }
+  .form__submit input:hover {
+    color: #ffffff;
+    cursor: auto;
+    background-color: transparent;
+  }
   select,
   input[type="text"],
   input[type="tel"],
@@ -407,8 +415,11 @@ textarea::placeholder {
   .related__thumbnail {
     height: 124px;
   }
+  .related__title {
+    font-size: 14px;
+  }
   .related__itemInner img {
-    height: auto;
+    max-height: 100%;
   }
 }
 
@@ -594,7 +605,7 @@ textarea::placeholder {
   font-family: "Ubuntu", sans-serif;
   font-size: 17px;
   font-style: italic;
-  font-weight: 600;
+  font-weight: 700;
   color: #ffffff;
   letter-spacing: 4px;
 }
@@ -611,7 +622,7 @@ textarea::placeholder {
 .header.-fixed {
   position: fixed;
   z-index: 200;
-  padding: 24px 40px;
+  padding: 20px 40px;
   margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.9);
 }
@@ -634,7 +645,7 @@ textarea::placeholder {
     justify-content: center;
     width: 100vw;
     height: calc(100vh - 52px);
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.95);
   }
   .header__hammenu {
     top: 2px;
@@ -711,10 +722,11 @@ textarea::placeholder {
   }
   .header .menu {
     flex-direction: column;
+    margin-top: -100px;
     font-family: "Ubuntu", sans-serif;
-    font-size: 28px;
+    font-size: 22px;
     font-style: italic;
-    font-weight: 600;
+    font-weight: 700;
     text-align: center;
     letter-spacing: 3px;
   }
@@ -787,7 +799,7 @@ textarea::placeholder {
   font-family: "Ubuntu", sans-serif;
   font-size: 17px;
   font-style: italic;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 2px;
 }
 
@@ -831,8 +843,9 @@ textarea::placeholder {
 @media screen and (max-width: 480px) {
   .contactButton {
     width: 92%;
-    padding: 18px 0 18px 32px;
-    font-size: 24px;
+    padding: 16px 0 16px 32px;
+    font-size: 22px;
+    letter-spacing: 4px;
   }
   .contactButton__icon {
     right: 32px;
@@ -844,12 +857,13 @@ textarea::placeholder {
   .footer {
     min-width: auto;
     padding: 48px 0 32px;
+    margin: -40px 0 0;
   }
   .footer__logo img {
     width: 224px;
   }
   .footer__links {
-    font-size: 15px;
+    font-size: 13px;
     letter-spacing: 1px;
   }
   .footer__copyrightWrapper {
@@ -951,7 +965,7 @@ textarea::placeholder {
 
 .home__siteLinksTitleEn {
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 700;
   color: #ffffff;
   letter-spacing: 10px;
 }
@@ -1014,7 +1028,7 @@ textarea::placeholder {
 .home__newsDate {
   width: 88px;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 700;
   color: #04287e;
 }
 
@@ -1155,7 +1169,7 @@ textarea::placeholder {
   font-family: "Ubuntu", sans-serif;
   font-size: 50px;
   font-style: italic;
-  font-weight: 600;
+  font-weight: 700;
   text-align: center;
   letter-spacing: 6px;
 }
@@ -1174,7 +1188,7 @@ textarea::placeholder {
 .about__messageText {
   width: 464px;
   margin: 0 0 0 40px;
-  font-weight: 600;
+  font-weight: 700;
   font-feature-settings: "palt";
 }
 
@@ -1238,7 +1252,7 @@ textarea::placeholder {
 .about__serviceItem {
   position: relative;
   width: 44%;
-  margin: 0 0 100px;
+  margin: 0 0 132px;
 }
 
 .about__serviceItem:nth-last-child(2), .about__serviceItem:last-child {
@@ -1283,8 +1297,9 @@ textarea::placeholder {
 }
 
 .about__serviceParagraph {
+  margin: 20px 0 0;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.6;
 }
 
@@ -1344,8 +1359,8 @@ textarea::placeholder {
 .about__historyParagraph {
   width: 1000px;
   padding: 0 100px;
-  margin: 48px auto 0;
-  font-weight: 600;
+  margin: 40px auto 0;
+  font-weight: 700;
   line-height: 2;
 }
 
@@ -1360,7 +1375,7 @@ textarea::placeholder {
   padding: 24px 0 24px 32px;
   margin: 48px 48px 0;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 700;
   color: #ffffff;
   letter-spacing: 1px;
   background-color: #000000;
@@ -1369,7 +1384,7 @@ textarea::placeholder {
 .about__historyYear::after {
   position: absolute;
   top: 50%;
-  right: 48px;
+  right: 36px;
   width: 14px;
   height: 19px;
   content: "";
@@ -1398,9 +1413,13 @@ textarea::placeholder {
   padding: 26px 0 26px 6px;
   margin: 0;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 1px;
   border-bottom: 1px solid #000000;
+}
+
+.about__historyContents dt {
+  min-width: 36px;
 }
 
 .about__historyContents dd {
@@ -1409,8 +1428,8 @@ textarea::placeholder {
 }
 
 .about__contact {
-  padding-top: 24px;
-  margin-top: -24px;
+  padding-top: 12px;
+  margin-top: -12px;
 }
 
 .about__contactInner {
@@ -1427,7 +1446,7 @@ textarea::placeholder {
     margin: 32px auto;
   }
   .about__messageHeadline {
-    font-size: 40px;
+    font-size: 32px;
     letter-spacing: 5px;
   }
   .about__messageContents {
@@ -1440,7 +1459,7 @@ textarea::placeholder {
   }
   .about__messageLead {
     margin: 24px 0 0;
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 2px;
   }
   .about__messageText {
@@ -1450,16 +1469,18 @@ textarea::placeholder {
   }
   .about__messageContent {
     margin: 20px 0 0;
+    font-size: 14px;
   }
   .about__messageCeoName {
     margin: 32px 0 0;
+    font-size: 14px;
   }
   .about__service {
     margin: 64px 0 0;
   }
   .about__headline {
-    padding: 40px 0 0;
-    font-size: 40px;
+    padding: 32px 0 0;
+    font-size: 32px;
     letter-spacing: 4px;
   }
   .about__headline.-history {
@@ -1474,7 +1495,7 @@ textarea::placeholder {
     align-items: center;
     width: 92%;
     padding: 64px 24px 0;
-    margin: 40px auto;
+    margin: 32px auto;
   }
   .about__serviceItem {
     width: 100%;
@@ -1498,7 +1519,7 @@ textarea::placeholder {
     font-size: 14px;
   }
   .about__companyHeadline {
-    font-size: 40px;
+    font-size: 32px;
   }
   .about__company {
     padding: 12px 0 240px;
@@ -1584,7 +1605,7 @@ textarea::placeholder {
 
 .archive__title {
   font-size: 19px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .archive__title a {
@@ -1658,7 +1679,7 @@ textarea::placeholder {
   margin: 0 12px 0 0;
   font-family: "Ubuntu", sans-serif;
   font-style: italic;
-  font-weight: 600;
+  font-weight: 700;
   color: #ffffff;
   text-align: center;
   letter-spacing: 4px;
@@ -1691,9 +1712,9 @@ textarea::placeholder {
   }
   .people__category {
     width: 92%;
-    height: 88px;
+    height: 36px;
     margin: 0 auto;
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 3px;
   }
   .people__thumbnail {
@@ -1702,8 +1723,8 @@ textarea::placeholder {
     margin: 24px auto 0;
   }
   .people__thumbnail img {
-    width: 168px;
-    height: 168px;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -1717,7 +1738,7 @@ textarea::placeholder {
   font-family: "Ubuntu", sans-serif;
   font-size: 17px;
   font-style: italic;
-  font-weight: 600;
+  font-weight: 700;
   text-align: center;
   letter-spacing: 2px;
 }
@@ -1728,11 +1749,12 @@ textarea::placeholder {
 }
 
 .works__category {
-  margin: 44px 0 40px;
+  padding-top: 84px;
+  margin: -44px 0 40px;
   font-family: "Ubuntu", sans-serif;
   font-size: 30px;
   font-style: italic;
-  font-weight: 600;
+  font-weight: 700;
   text-align: center;
   letter-spacing: 4px;
 }
@@ -1767,7 +1789,7 @@ textarea::placeholder {
   font-family: "Ubuntu", sans-serif;
   font-size: 24px;
   font-style: italic;
-  font-weight: 600;
+  font-weight: 700;
   text-align: center;
   letter-spacing: 2px;
 }
@@ -1778,12 +1800,16 @@ textarea::placeholder {
   }
   .works__categories {
     margin: 40px 0 44px;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 2;
   }
+  .works__categories a {
+    margin: 0 8px;
+  }
   .works__category {
-    margin: 32px 0;
-    font-size: 28px;
+    padding-top: 58px;
+    margin: -26px 0 24px;
+    font-size: 24px;
   }
   .works__list {
     grid-template-columns: 1fr 1fr;
@@ -1792,7 +1818,7 @@ textarea::placeholder {
   }
   .works__paragraph {
     margin: 32px 0 64px;
-    font-size: 22px;
+    font-size: 18px;
   }
 }
 
@@ -1800,6 +1826,7 @@ textarea::placeholder {
   position: relative;
   display: flex;
   align-items: flex-start;
+  justify-content: space-between;
   max-width: 1000px;
   margin: 72px auto;
 }
@@ -1823,7 +1850,7 @@ textarea::placeholder {
   font-family: "Ubuntu", sans-serif;
   font-size: 15px;
   font-style: italic;
-  font-weight: 600;
+  font-weight: 700;
   color: #ffffff;
   text-align: center;
   letter-spacing: 2px;
@@ -1852,14 +1879,14 @@ textarea::placeholder {
   font-family: "Ubuntu", sans-serif;
   font-size: 17px;
   font-style: italic;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 1px;
 }
 
 .singlePeople__contents {
   margin: 32px 0 0;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 2;
   font-feature-settings: "palt";
 }
@@ -1899,7 +1926,7 @@ textarea::placeholder {
   font-family: "Ubuntu", sans-serif;
   font-size: 30px;
   font-style: italic;
-  font-weight: 600;
+  font-weight: 700;
   text-align: center;
   letter-spacing: 3px;
 }
@@ -1922,6 +1949,9 @@ textarea::placeholder {
     width: 278px;
     margin: 24px auto 0;
   }
+  .singlePeople__contents {
+    font-size: 14px;
+  }
   .singlePeople__category {
     padding: 24px 12px;
     font-size: 14px;
@@ -1932,11 +1962,15 @@ textarea::placeholder {
   .singlePeople__sns {
     position: relative;
     justify-content: center;
+    max-height: 26px;
     margin: 24px 0 0;
   }
   .singlePeople__works {
     width: 92%;
     margin: 32px auto 64px;
+  }
+  .singlePeople__headline {
+    font-size: 24px;
   }
 }
 
@@ -1977,7 +2011,7 @@ textarea::placeholder {
 
 .singleWorks__photos {
   width: 1000px;
-  margin: 48px auto 80px;
+  margin: 80px auto;
 }
 
 .singleWorks__photos img:not(:first-of-type) {
@@ -2005,10 +2039,11 @@ textarea::placeholder {
 .singleWorks__profile {
   display: flex;
   flex-direction: column;
+  margin: 0 0 24px;
 }
 
-.singleWorks__profile:not(:first-of-type) {
-  margin-left: 24px;
+.singleWorks__profile:not(:last-of-type) {
+  margin-right: 24px;
 }
 
 .singleWorks__profile img {
@@ -2017,10 +2052,14 @@ textarea::placeholder {
   object-fit: cover;
 }
 
+.singleWorks .labelValue .-website {
+  margin: 16px 0 0;
+}
+
 .singleWorks__name {
   margin: 12px 0 0;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 2px;
 }
 
@@ -2028,7 +2067,7 @@ textarea::placeholder {
   font-family: "Ubuntu", sans-serif;
   font-size: 13px;
   font-style: italic;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.5;
 }
 
@@ -2047,7 +2086,7 @@ textarea::placeholder {
   font-family: "Ubuntu", sans-serif;
   font-size: 30px;
   font-style: italic;
-  font-weight: 600;
+  font-weight: 700;
   text-align: center;
   letter-spacing: 4px;
 }
@@ -2079,8 +2118,8 @@ textarea::placeholder {
     width: 100%;
     height: auto;
   }
-  .singleWorks__profile:not(:first-of-type) {
-    margin-left: 0;
+  .singleWorks__profile:not(:last-of-type) {
+    margin-right: 0;
   }
   .singleWorks__name {
     margin: 6px 0 0;
@@ -2088,5 +2127,12 @@ textarea::placeholder {
   .singleWorks__photos {
     width: 92%;
     margin: 40px auto 72px;
+  }
+  .singleWorks .labelValue .-website {
+    margin: 8px 0 0;
+  }
+  .singleWorks .yarpp-related h3 {
+    font-size: 24px;
+    letter-spacing: 3px;
   }
 }
