@@ -31,6 +31,19 @@
     text-align: center;
     letter-spacing: 4px;
     background-color: $black;
+
+    &.-sp {
+      display: none;
+    }
+  }
+
+  &__link {
+    position: relative;
+    color: $white;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 
   &__thumbnail {
@@ -38,47 +51,110 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-row-gap: 12px;
     grid-column-gap: 12px;
+  }
 
-    img {
-      width: 240px;
-      height: 240px;
-      object-fit: cover;
-      vertical-align: bottom;
-    }
+  .attachment-post-thumbnail {
+    width: 240px;
+    height: 240px;
+    vertical-align: bottom;
+    object-fit: cover;
+  }
+
+  &__detailInfo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 24px;
+    background-color: rgba($color: $black, $alpha: 0.4);
+    opacity: 0;
+  }
+
+  &__kanji {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 3px;
+  }
+
+  &__name {
+    padding: 0 6px;
+    margin: 6px 0 0;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1.1;
+    color: $black;
+    letter-spacing: 1px;
+    background-color: $white;
+  }
+
+  &__positionName {
+    margin: 4px 0 0;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 13px;
+    font-style: italic;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  &__icon {
+    width: 14px;
+    height: 18px;
+    margin: 8px 0 0;
   }
 }
 
 @include mq(mobile) {
   .people {
     &__list {
-      margin: 40px 0;
+      margin: 20px 0 48px;
     }
 
     &__position {
       flex-direction: column;
 
       &:not(:first-of-type) {
-        margin-top: 40px;
+        margin-top: 24px;
       }
     }
 
     &__category {
-      width: 92%;
-      height: 36px;
+      width: 100%;
+      min-width: auto;
+      height: auto;
+      padding: 0;
       margin: 0 auto;
-      font-size: 18px;
+      font-size: 15px;
       letter-spacing: 3px;
+
+      &.-sp {
+        display: flex;
+      }
+
+      &.-pc {
+        display: none;
+      }
     }
 
     &__thumbnail {
       grid-template-columns: 1fr 1fr;
       width: 92%;
       margin: 24px auto 0;
+    }
 
-      img {
-        width: 100%;
-        height: 100%;
-      }
+    .attachment-post-thumbnail {
+      width: 100%;
+      height: 100%;
+    }
+
+    &__detailInfo {
+      display: none;
     }
   }
 }

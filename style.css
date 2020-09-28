@@ -371,6 +371,7 @@ textarea::placeholder {
     margin: 8px 0 0;
     font-size: 14px;
     line-height: 1.9;
+    text-align: justify;
     letter-spacing: 1px;
   }
   .wpcf7 {
@@ -1391,7 +1392,7 @@ textarea::placeholder {
   background-image: url(assets/img/icons/icon_angle.png);
   background-size: cover;
   transition: all 0.2s;
-  transform: translateY(-50%) rotate(-90deg);
+  transform: translateY(-50%) rotate(90deg);
 }
 
 .about__historyYear:hover {
@@ -1399,10 +1400,11 @@ textarea::placeholder {
 }
 
 .about__historyYear.-opened::after {
-  transform: translateY(-50%) rotate(90deg);
+  transform: translateY(-50%) rotate(-90deg);
 }
 
 .about__historyContents {
+  display: none;
   width: 1000px;
   padding: 0 96px;
   margin: 12px auto 0;
@@ -1470,6 +1472,7 @@ textarea::placeholder {
   .about__messageContent {
     margin: 20px 0 0;
     font-size: 14px;
+    text-align: justify;
   }
   .about__messageCeoName {
     margin: 32px 0 0;
@@ -1517,12 +1520,17 @@ textarea::placeholder {
   }
   .about__serviceParagraph {
     font-size: 14px;
+    text-align: justify;
   }
   .about__companyHeadline {
     font-size: 32px;
   }
   .about__company {
     padding: 12px 0 240px;
+  }
+  .about__clientItem {
+    padding-left: 1em;
+    text-indent: -1em;
   }
   .about__history {
     margin: -224px 0 0;
@@ -1686,6 +1694,19 @@ textarea::placeholder {
   background-color: #000000;
 }
 
+.people__category.-sp {
+  display: none;
+}
+
+.people__link {
+  position: relative;
+  color: #ffffff;
+}
+
+.people__link:hover {
+  opacity: 1;
+}
+
 .people__thumbnail {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -1693,38 +1714,98 @@ textarea::placeholder {
   grid-column-gap: 12px;
 }
 
-.people__thumbnail img {
+.people .attachment-post-thumbnail {
   width: 240px;
   height: 240px;
-  object-fit: cover;
   vertical-align: bottom;
+  object-fit: cover;
+}
+
+.people__detailInfo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 24px;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+}
+
+.people__kanji {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.people__name {
+  padding: 0 6px;
+  margin: 6px 0 0;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #000000;
+  letter-spacing: 1px;
+  background-color: #ffffff;
+}
+
+.people__positionName {
+  margin: 4px 0 0;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.people__icon {
+  width: 14px;
+  height: 18px;
+  margin: 8px 0 0;
 }
 
 @media screen and (max-width: 480px) {
   .people__list {
-    margin: 40px 0;
+    margin: 20px 0 48px;
   }
   .people__position {
     flex-direction: column;
   }
   .people__position:not(:first-of-type) {
-    margin-top: 40px;
+    margin-top: 24px;
   }
   .people__category {
-    width: 92%;
-    height: 36px;
+    width: 100%;
+    min-width: auto;
+    height: auto;
+    padding: 0;
     margin: 0 auto;
-    font-size: 18px;
+    font-size: 15px;
     letter-spacing: 3px;
+  }
+  .people__category.-sp {
+    display: flex;
+  }
+  .people__category.-pc {
+    display: none;
   }
   .people__thumbnail {
     grid-template-columns: 1fr 1fr;
     width: 92%;
     margin: 24px auto 0;
   }
-  .people__thumbnail img {
+  .people .attachment-post-thumbnail {
     width: 100%;
     height: 100%;
+  }
+  .people__detailInfo {
+    display: none;
   }
 }
 
@@ -1889,6 +1970,7 @@ textarea::placeholder {
   font-weight: 700;
   line-height: 2;
   font-feature-settings: "palt";
+  text-align: justify;
 }
 
 .singlePeople__sns {

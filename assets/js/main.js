@@ -69,4 +69,10 @@ jQuery(function() {
     }
     jQuery(this).toggleClass('-opened');
   })
+
+  jQuery(".people__link").hover(function() {
+    jQuery(this).children('.people__detailInfo').stop().animate({ "opacity":"1" }, { duration: 200 });
+  },function(){
+    jQuery(this).children('.people__detailInfo').stop().animate({ "opacity":"0" }, { duration: 200 });
+  });
 })

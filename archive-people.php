@@ -19,9 +19,7 @@ get_header();
 		<div class="people">
       <section class="l-mainVisual">
         <picture class="catch__mainVisualPicture">
-          <!-- <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/people/mv-sp.webp" media="(max-width: 480px)" type="image/webp"> -->
-          <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/people/mv.webp" media="(min-width: 481px)" type="image/webp">
-          <!-- <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/people/mv-sp.jpg" media="(max-width: 480px)"> -->
+          <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/people/mv.webp" type="image/webp">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/people/mv.jpg" alt="">
         </picture>
       </section>
@@ -42,15 +40,36 @@ get_header();
         ?>
 
         <div class="people__position">
-          <h2 class="people__category">
+          <h2 class="people__category -pc">
             CREATORS<br class="-pc">
             IN<br class="-pc">
             HOUSE
           </h2>
           <div class="people__thumbnail">
+            <h2 class="people__category -sp">
+              CREATORS<br>
+              IN<br>
+              HOUSE
+            </h2>
             <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
               <?php if (has_post_thumbnail()) { ?>
-                <a href="<?php the_permalink(); ?>">
+                <a href="<?php the_permalink(); ?>" class="people__link">
+                  <div class="people__detailInfo">
+                    <?php if (get_field('name-kanji')): ?>
+                      <span class="people__kanji"><?php the_field('name-kanji'); ?></span>
+                    <?php endif; ?>
+                    <span class="people__name">
+                    <?php
+                      $name = get_the_title();
+                      echo strtoupper($name);
+                    ?></span>
+                    <?php if (get_field('position')): ?>
+                      <p class="people__positionName">
+                        <?php echo strtoupper(get_field('position')); ?>
+                      </p>
+                    <?php endif; ?>
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/icon_angle.png" alt="矢印" class="people__icon">
+                  </div>
                   <?php the_post_thumbnail(); } ?>
                 </a>
             <?php endwhile; ?>
@@ -74,11 +93,29 @@ get_header();
             );
             $the_query = new WP_Query($args); if ($the_query->have_posts()):
           ?>
-          <h2 class="people__category">CREATORS</h2>
+          <h2 class="people__category -pc">CREATORS</h2>
           <div class="people__thumbnail">
+            <h2 class="people__category -sp">
+              CREATORS
+            </h2>
             <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
               <?php if (has_post_thumbnail()) { ?>
-                <a href="<?php the_permalink(); ?>">
+                <a href="<?php the_permalink(); ?>" class="people__link">
+                  <div class="people__detailInfo">
+                    <?php if (get_field('name-kanji')): ?>
+                      <span class="people__kanji"><?php the_field('name-kanji'); ?></span>
+                    <?php endif; ?>
+                    <span class="people__name">
+                    <?php
+                      $name = get_the_title();
+                      echo strtoupper($name);
+                    ?></span>
+                    <?php if (get_field('position')): ?>
+                      <p class="people__positionName">
+                        <?php echo strtoupper(get_field('position')); ?>
+                      </p>
+                    <?php endif; ?>
+                  </div>
                   <?php the_post_thumbnail(); } ?>
                 </a>
             <?php endwhile; ?>

@@ -32,15 +32,15 @@ get_header();
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/ceo.jpg" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/about/ceo.jpg, <?php echo get_template_directory_uri(); ?>/assets/img/about/ceo@2x.jpg 2x" alt="">
           <div class="about__messageText">
             <p class="about__messageLead">
-              「デジタルネイティブ」の視点から<br>
+              「デジタルネイティブ」の視点から<br class="-pc">
               映像の新しいカタチを創造。<br>
-              常に生まれ変わる世界の「クリエイティブ」を<br>
+              常に生まれ変わる世界の「クリエイティブ」を<br class="-pc">
               あなたと一緒に追求します。
             </p>
             <p class="about__messageContent">
               私たちAnMAKE Tokyoは創業時より、イベント映像の新しいカタチの創造につとめ、映像制作をしてまいりました。おかげさまで、現在その領域は様々なクライアント様のニーズに沿ったクリエイティブ全般に広がりを見せています。今後も新しい映像のカタチを追求し、多様なニーズにお応えしていきたいと考えております。<br>
             </p>
-            <span class="about__messageCeoName">佐藤 遼太郎 社長兼最高経営責任者（CEO)</span>
+            <span class="about__messageCeoName">佐藤 遼太郎 社長兼最高経営責任者(CEO)</span>
           </div>
         </div>
       </section>
@@ -224,7 +224,7 @@ get_header();
           現在はその経験を活かし、PR映像、YouTube映像制作、VR映像制作、SNS運営等、様々なジャンルに展開。常に新しいクリエイティブを追求し、映像制作を行なっている。
         </p>
         <div class="about__historyYearBlock">
-          <h3 class="about__historyYear -opened">2019年</h3>
+          <h3 class="about__historyYear">2019年</h3>
           <div class="about__historyContents">
             <dl>
               <dt>2月</dt>
@@ -258,8 +258,8 @@ get_header();
             </dl>
           </div>
         </div>
-        <div class="about__historyYearBlock ">
-          <h3 class="about__historyYear -opened">2020年</h3>
+        <div class="about__historyYearBlock">
+          <h3 class="about__historyYear">2020年</h3>
           <div class="about__historyContents">
             <dl>
               <dt>2月</dt>

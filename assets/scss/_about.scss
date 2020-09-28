@@ -238,7 +238,7 @@
       background-image: url(assets/img/icons/icon_angle.png);
       background-size: cover;
       transition: all 0.2s;
-      transform: translateY(-50%) rotate(-90deg);
+      transform: translateY(-50%) rotate(90deg);
     }
 
     &:hover {
@@ -247,12 +247,13 @@
 
     &.-opened {
       &::after {
-        transform: translateY(-50%) rotate(90deg);
+        transform: translateY(-50%) rotate(-90deg);
       }
     }
   }
 
   &__historyContents {
+    display: none;
     width: $--content-width-sm;
     padding: 0 96px;
     margin: 12px auto 0;
@@ -328,6 +329,7 @@
     &__messageContent {
       margin: 20px 0 0;
       font-size: 14px;
+      text-align: justify;
     }
 
     &__messageCeoName {
@@ -392,6 +394,7 @@
 
     &__serviceParagraph {
       font-size: 14px;
+      text-align: justify;
     }
 
     &__companyHeadline {
@@ -400,6 +403,11 @@
 
     &__company {
       padding: 12px 0 240px;
+    }
+
+    &__clientItem {
+      padding-left: 1em;
+      text-indent: -1em;
     }
 
     &__history {
