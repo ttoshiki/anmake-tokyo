@@ -19,9 +19,7 @@ get_header();
 		<div class="works">
       <section class="l-mainVisual">
         <picture class="catch__mainVisualPicture">
-          <!-- <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/works/mv-sp.webp" media="(max-width: 480px)" type="image/webp"> -->
-          <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/works/mv.webp" media="(min-width: 481px)" type="image/webp">
-          <!-- <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/works/mv-sp.jpg" media="(max-width: 480px)"> -->
+          <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/works/mv.webp" type="image/webp">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/works/mv.jpg" alt="">
         </picture>
       </section>
@@ -42,30 +40,74 @@ get_header();
           $taxonomy_name = 'category_works';
           $taxonomies = get_terms($taxonomy_name, 'hide_empty=0');
           if (!is_wp_error($taxonomies) && count($taxonomies)):
-
             foreach ($taxonomies as $taxonomy):
-              $tax_posts = get_posts(array('post_type' => get_post_type(), 'taxonomy' => $taxonomy_name,
-              'term' => $taxonomy->slug ));
+              $tax_posts_horizontal = get_posts(
+                array(
+                  'post_type' => get_post_type(),
+                  'taxonomy' => $taxonomy_name,
+                  'term' => $taxonomy->slug,
+                  'tax_query' => array(
+                    array(
+                      'taxonomy' => 'picture_orientation',  // カスタムタクソノミー名
+                      'field'    => 'slug',  // タームの指定方法。term_id / slug / name のいずれかで指定
+                      'terms'    => 'horizontal'  // 上で指定したタクソノミーに属するタームを指定
+                    )
+                  )
+                )
+              );
+              $tax_posts_vertical = get_posts(
+                array(
+                  'post_type' => get_post_type(),
+                  'taxonomy' => $taxonomy_name,
+                  'term' => $taxonomy->slug,
+                  'tax_query' => array(
+                    array(
+                      'taxonomy' => 'picture_orientation',  // カスタムタクソノミー名
+                      'field'    => 'slug',  // タームの指定方法。term_id / slug / name のいずれかで指定
+                      'terms'    => 'vertical'  // 上で指定したタクソノミーに属するタームを指定
+                    )
+                  )
+                )
+              );
           ?>
           <hr class="works__divider">
           <h2 class="works__category" id="<?php echo esc_html(strtolower($taxonomy->name)); ?>"><?php echo esc_html($taxonomy->name); ?></h2>
-          <?php if (!empty($tax_posts)): ?>
-          <ul class="works__list">
-            <?php foreach ($tax_posts as $tax_post): ?>
-              <li class="works__item">
-                <a href="<?php echo get_permalink($tax_post->ID); ?>" class="works__thumbnailLink">
-                  <?php
-                  if (has_post_thumbnail($tax_post->ID)) {
-                      echo get_the_post_thumbnail($tax_post->ID, 'post-thumbnail');
-                  }
-                  ?>
-                </a>
-              </li>
-            <?php endforeach; ?>
-          </ul>
+          <?php if (!empty($tax_posts_horizontal) || (!empty($tax_posts_vertical))): ?>
+            <div class="works__listWrapper">
+              <?php if(!empty($tax_posts_horizontal)): ?>
+                <ul class="works__list -horizontal">
+                  <?php foreach ($tax_posts_horizontal as $tax_post): ?>
+                    <li class="works__item">
+                      <a href="<?php echo get_permalink($tax_post->ID); ?>" class="works__thumbnailLink">
+                        <?php
+                        if (has_post_thumbnail($tax_post->ID)) {
+                            echo get_the_post_thumbnail($tax_post->ID, 'post-thumbnail');
+                        }
+                        ?>
+                      </a>
+                    </li>
+                  <?php endforeach; ?>
+                </ul>
+              <?php endif; ?>
+              <?php if (!empty($tax_posts_vertical)): ?>
+                <ul class="works__list -vertical">
+                  <?php foreach ($tax_posts_vertical as $tax_post): ?>
+                    <li class="works__item">
+                      <a href="<?php echo get_permalink($tax_post->ID); ?>" class="works__thumbnailLink">
+                        <?php
+                        if (has_post_thumbnail($tax_post->ID)) {
+                            echo get_the_post_thumbnail($tax_post->ID, 'post-thumbnail');
+                        }
+                        ?>
+                      </a>
+                    </li>
+                  <?php endforeach; ?>
+                </ul>
+              <?php endif; ?>
+            </div>
           <?php else: ?>
             <p class="works__paragraph">Coming Soon...</p>
-          <?php endif;  endforeach; endif; ?>
+          <?php endif; endforeach; endif; ?>
 
       </section>
 		</div>

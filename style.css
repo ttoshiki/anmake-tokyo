@@ -1840,11 +1840,23 @@ textarea::placeholder {
   letter-spacing: 4px;
 }
 
+.works__listWrapper {
+  margin: 32px 0 72px;
+}
+
 .works__list {
   display: grid;
+  margin: 0;
+}
+
+.works__list.-horizontal {
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 200px;
-  margin: 32px 0 72px;
+}
+
+.works__list.-vertical {
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 250px;
 }
 
 .works__item {

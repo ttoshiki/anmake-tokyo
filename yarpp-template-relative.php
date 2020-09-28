@@ -1,7 +1,20 @@
 <?php if (have_posts()):?>
   <h3>PICK UP WORKS</h3>
+  <?php
+    $args = array(
+      'post_type' => 'works',
+      'tax_query' => array(
+        array(
+          'taxonomy' => 'picture_orientation',
+          'field' => 'slug',
+          'terms' => 'horizontal',
+        )
+      )
+    );
+    $the_query = new WP_Query($args); if($the_query->have_posts()):
+  ?>
   <div class="related__list">
-    <?php while (have_posts()) : the_post(); ?>
+    <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
       <?php
         $post_terms = get_the_terms('', 'category_works')
       ?>
@@ -24,4 +37,4 @@
   </div>
 <?php else: ?>
 
-<?php endif; ?>
+<?php endif; endif; ?>

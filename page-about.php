@@ -19,9 +19,7 @@ get_header();
 		<div class="about">
       <section class="l-mainVisual">
         <picture class="catch__mainVisualPicture">
-          <!-- <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/about/mv-sp.webp" media="(max-width: 480px)" type="image/webp"> -->
-          <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/about/mv.webp" media="(min-width: 481px)" type="image/webp">
-          <!-- <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/about/mv-sp.jpg" media="(max-width: 480px)"> -->
+          <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/about/mv.webp" type="image/webp">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/mv.jpg" alt="">
         </picture>
       </section>
