@@ -48,9 +48,9 @@ get_header();
                   'term' => $taxonomy->slug,
                   'tax_query' => array(
                     array(
-                      'taxonomy' => 'picture_orientation',  // カスタムタクソノミー名
-                      'field'    => 'slug',  // タームの指定方法。term_id / slug / name のいずれかで指定
-                      'terms'    => 'horizontal'  // 上で指定したタクソノミーに属するタームを指定
+                      'taxonomy' => 'picture_orientation',
+                      'field'    => 'slug',
+                      'terms'    => 'horizontal'
                     )
                   )
                 )
@@ -62,9 +62,9 @@ get_header();
                   'term' => $taxonomy->slug,
                   'tax_query' => array(
                     array(
-                      'taxonomy' => 'picture_orientation',  // カスタムタクソノミー名
-                      'field'    => 'slug',  // タームの指定方法。term_id / slug / name のいずれかで指定
-                      'terms'    => 'vertical'  // 上で指定したタクソノミーに属するタームを指定
+                      'taxonomy' => 'picture_orientation',
+                      'field'    => 'slug',
+                      'terms'    => 'vertical'
                     )
                   )
                 )

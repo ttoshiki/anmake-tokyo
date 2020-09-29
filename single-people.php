@@ -93,31 +93,39 @@ get_header();
           global $post;
           $slug = $post->post_name;
           $args = array(
-            'post_type' => 'works', // 投稿タイプのスラッグを指定
-            'post_status' => 'publish', // 公開済の投稿を指定
+            'post_type' => 'works',
+            'post_status' => 'publish',
             'tax_query' => array(
                 array (
-                    'taxonomy' => 'member',
-                    'field' => 'slug',
-                    'terms' => $slug,
+                  'taxonomy' => 'member',
+                  'field' => 'slug',
+                  'terms' => $slug,
+                ),
+                array (
+                  'taxonomy' => 'picture_orientation',
+                  'field'    => 'slug',
+                  'terms'    => 'horizontal'
                 )
             )
           );
+
           $the_query = new WP_Query($args); if ($the_query->have_posts()):
         ?>
-        <ul class="works__list">
-          <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
-            <?php if (has_post_thumbnail()) { ?>
-              <li class="works__item">
-                <a href="<?php echo get_permalink($tax_post->ID); ?>" class="works__thumbnailLink">
-                  <?php the_post_thumbnail(); ?>
-                </a>
-              </li>
-              <?php } else { ?>
-              <img src="" alt="no-image" width="240" height="240">
-            <?php } ?>
-          <?php endwhile; ?>
-        </ul>
+        <div class="works__listWrapper">
+          <ul class="works__list -horizontal">
+            <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
+              <?php if (has_post_thumbnail()) { ?>
+                <li class="works__item">
+                  <a href="<?php echo get_permalink($tax_post->ID); ?>" class="works__thumbnailLink">
+                    <?php the_post_thumbnail(); ?>
+                  </a>
+                </li>
+                <?php } else { ?>
+                <img src="" alt="no-image" width="240" height="240">
+              <?php } ?>
+            <?php endwhile; ?>
+          </ul>
+        </div>
         <?php wp_reset_postdata(); ?>
         <?php else: ?>
         <p class="works__paragraph">Coming Soon...</p>
