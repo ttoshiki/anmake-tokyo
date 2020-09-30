@@ -55,57 +55,23 @@ get_header();
               <dt class="labelValue__label">MEMBER</dt>
               <dd class="labelValue__value singleWorks__members">
                 <?php
-                  $terms = get_the_terms($post->ID, 'member');
-                  foreach ($terms as $term):
-                ?>
-                  <div class="singleWorks__profile">
-                    <?php switch($term->name) {
-                      case '佐藤 遼太郎':
-                    ?>
-                        <img src="<?php $upload_dir = wp_upload_dir(); echo $upload_dir['baseurl']; ?>/2020/09/img_s@2x.jpg" alt="佐藤 遼太郎">
-                        <span class="singleWorks__name">佐藤 遼太郎</span>
-                        <span class="singleWorks__position">PRODUCER</span>
-                    <?php
-                      break;
-                      case '片寄 裕太郎':
-                    ?>
-                        <img src="<?php $upload_dir = wp_upload_dir(); echo $upload_dir['baseurl']; ?>/2020/09/img_k@2x.jpg" alt="片寄 裕太郎">
-                        <span class="singleWorks__name">片寄 裕太郎</span>
-                        <span class="singleWorks__position">DIRECTOR/DP</span>
-                    <?php
-                      break;
-                      case '高野 隼弥':
-                    ?>
-                        <img src="<?php $upload_dir = wp_upload_dir(); echo $upload_dir['baseurl']; ?>/2020/09/img_t@2x-1.jpg" alt="高野 隼弥">
-                        <span class="singleWorks__name">高野 隼弥</span>
-                        <span class="singleWorks__position">DIRECTOR</span>
-                    <?php
-                      break;
-                      case '八代 健翔':
-                    ?>
-                        <img src="<?php $upload_dir = wp_upload_dir(); echo $upload_dir['baseurl']; ?>/2020/09/img_m@2x.jpg" alt="八代 健翔">
-                        <span class="singleWorks__name">八代 健翔</span>
-                        <span class="singleWorks__position">DIRECTOR / DP</span>
-                    <?php
-                      break;
-                      case '堀沢 春香':
-                    ?>
-                        <img src="<?php $upload_dir = wp_upload_dir(); echo $upload_dir['baseurl']; ?>/2020/09/img_h@2x.jpg" alt="堀沢 春香">
-                        <span class="singleWorks__name">堀沢 春香</span>
-                        <span class="singleWorks__position">DIRECTOR</span>
-                    <?php
-                      break;
-                      case '松崎 竜也':
-                    ?>
-                        <img src="<?php $upload_dir = wp_upload_dir(); echo $upload_dir['baseurl']; ?>/2020/09/img_006@2x.jpg" alt="松崎 竜也">
-                        <span class="singleWorks__name">松崎 竜也</span>
-                        <span class="singleWorks__position">DIRECTOR</span>
-                    <?php
-                      break;
-                    ?>
-                    <?php } ?>
-                  </div>
+                  $taxonomy_name = 'member';
+                  $taxonomies = get_the_terms( $post->ID, $taxonomy_name);
+                  if (!is_wp_error($taxonomies) && count($taxonomies)):
+                    foreach ($taxonomies as $taxonomy):
+                      $term_id = esc_html($taxonomy->term_id);
+                      $term_idsp = "member_".$term_id; //カスタムフィールドを取得するのに必要なtermのIDは「taxonomyname_ + termID」
+                      $photo = get_field('member-photo', $term_idsp);
+                      $photosp = wp_get_attachment_image_src($photo, 'full');
+                      $position = get_field('member-position', $term_idsp);
+                      ?>
+                    <div class="singleWorks__profile">
+                      <img src="<?php echo $photosp[0]; ?>" alt="<?php echo esc_html($taxonomy->name); ?>">
+                      <span class="singleWorks__name"><?php echo esc_html($taxonomy->name); ?></span>
+                      <span class="singleWorks__position"><?php echo strtoupper(esc_html($position)); ?></span>
+                    </div>
                     <?php endforeach; ?>
+                <?php endif; ?>
               </dd>
             </dl>
             <?php if (get_field('website')): ?>
