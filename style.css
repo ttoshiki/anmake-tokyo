@@ -31,7 +31,7 @@ body {
 
 h1,
 h2 {
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Bebas Neue", cursive;
 }
 
 ul,
@@ -142,7 +142,7 @@ address {
   max-width: 1000px;
   padding: 12px 0 12px 24px;
   margin: -38px auto 0;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Bebas Neue", cursive;
   font-size: 30px;
   font-style: italic;
   font-weight: 700;
@@ -184,7 +184,7 @@ address {
 }
 
 .related__title, .related__category {
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Bebas Neue", cursive;
   font-size: 15px;
   font-style: italic;
   font-weight: 700;
@@ -219,7 +219,7 @@ address {
 .labelValue__label {
   min-width: 300px;
   margin: 6px 0 0;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Bebas Neue", cursive;
   font-size: 20px;
   font-style: italic;
   font-weight: 700;
@@ -603,7 +603,7 @@ textarea::placeholder {
 }
 
 .header__nav a {
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Bebas Neue", cursive;
   font-size: 17px;
   font-style: italic;
   font-weight: 700;
@@ -724,7 +724,7 @@ textarea::placeholder {
   .header .menu {
     flex-direction: column;
     margin-top: -100px;
-    font-family: "Ubuntu", sans-serif;
+    font-family: "Bebas Neue", cursive;
     font-size: 22px;
     font-style: italic;
     font-weight: 700;
@@ -747,7 +747,7 @@ textarea::placeholder {
   width: 1000px;
   padding: 22px 0 22px 48px;
   margin: 0 auto;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Bebas Neue", cursive;
   font-size: 50px;
   font-style: italic;
   font-weight: bold;
@@ -797,7 +797,7 @@ textarea::placeholder {
 
 .footer__links {
   margin: 30px 0 0;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Bebas Neue", cursive;
   font-size: 17px;
   font-style: italic;
   font-weight: 700;
@@ -836,7 +836,7 @@ textarea::placeholder {
 }
 
 .footer__copyright {
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Bebas Neue", cursive;
   color: #ffffff;
   letter-spacing: 2px;
 }
@@ -1167,7 +1167,7 @@ textarea::placeholder {
 
 .about__messageHeadline {
   margin: 0;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Bebas Neue", cursive;
   font-size: 50px;
   font-style: italic;
   font-weight: 700;
@@ -1271,7 +1271,7 @@ textarea::placeholder {
 .about__serviceHeadline {
   position: absolute;
   margin: 0;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Bebas Neue", cursive;
   font-style: italic;
 }
 
@@ -1311,7 +1311,7 @@ textarea::placeholder {
 
 .about__companyHeadline {
   margin: 0;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Bebas Neue", cursive;
   font-size: 50px;
   font-style: italic;
   color: #ffffff;
@@ -1685,7 +1685,7 @@ textarea::placeholder {
   height: 240px;
   padding: 0 24px;
   margin: 0 12px 0 0;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Bebas Neue", cursive;
   font-style: italic;
   font-weight: 700;
   color: #ffffff;
@@ -1745,7 +1745,7 @@ textarea::placeholder {
 .people__name {
   padding: 0 6px;
   margin: 6px 0 0;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Bebas Neue", cursive;
   font-size: 16px;
   font-style: italic;
   font-weight: 700;
@@ -1757,7 +1757,7 @@ textarea::placeholder {
 
 .people__positionName {
   margin: 6px 0 0;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Bebas Neue", cursive;
   font-size: 13px;
   font-style: italic;
   font-weight: 700;
@@ -1816,7 +1816,7 @@ textarea::placeholder {
 
 .works__categories {
   margin: 64px 0 72px;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Bebas Neue", cursive;
   font-size: 17px;
   font-style: italic;
   font-weight: 700;
@@ -1832,7 +1832,7 @@ textarea::placeholder {
 .works__category {
   padding-top: 84px;
   margin: -44px 0 40px;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Bebas Neue", cursive;
   font-size: 30px;
   font-style: italic;
   font-weight: 700;
@@ -1879,7 +1879,7 @@ textarea::placeholder {
 
 .works__paragraph {
   margin: 40px 0 80px;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Bebas Neue", cursive;
   font-size: 24px;
   font-style: italic;
   font-weight: 700;
@@ -1946,7 +1946,7 @@ textarea::placeholder {
 .singlePeople__category {
   padding: 26px 14px;
   margin: 0;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Bebas Neue", cursive;
   font-size: 15px;
   font-style: italic;
   font-weight: 700;
@@ -1975,7 +1975,7 @@ textarea::placeholder {
 
 .singlePeople__position {
   margin: 4px 0 0;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Bebas Neue", cursive;
   font-size: 17px;
   font-style: italic;
   font-weight: 700;
@@ -2023,7 +2023,7 @@ textarea::placeholder {
 
 .singlePeople__headline {
   margin: 0;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Bebas Neue", cursive;
   font-size: 30px;
   font-style: italic;
   font-weight: 700;
@@ -2164,7 +2164,7 @@ textarea::placeholder {
 }
 
 .singleWorks__position {
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Bebas Neue", cursive;
   font-size: 13px;
   font-style: italic;
   font-weight: 700;
@@ -2183,7 +2183,7 @@ textarea::placeholder {
 
 .singleWorks .yarpp-related h3 {
   margin: 40px 0 0;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Bebas Neue", cursive;
   font-size: 30px;
   font-style: italic;
   font-weight: 700;

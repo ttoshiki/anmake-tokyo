@@ -169,8 +169,8 @@ add_action('wp_enqueue_scripts', 'anmake_tokyo_scripts');
 function twpp_enqueue_styles()
 {
     wp_enqueue_style(
-        'Ubuntu',
-        '<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,500;1,700&display=swap" rel="stylesheet">'
+        'google-webfont-style',
+        '//fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'
     );
 }
 
