@@ -1187,7 +1187,7 @@ textarea::placeholder {
 }
 
 .about__messageText {
-  width: 464px;
+  width: 472px;
   margin: 0 0 0 40px;
   font-weight: 700;
   font-feature-settings: "palt";
@@ -1944,6 +1944,11 @@ textarea::placeholder {
 }
 
 .singlePeople__category {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  min-height: 120px;
   padding: 26px 14px;
   margin: 0;
   font-family: "Bebas Neue", cursive;
