@@ -70,7 +70,6 @@ get_header();
                 )
               );
           ?>
-          <hr class="works__divider">
           <h2 class="works__category" id="<?php echo esc_html(strtolower($taxonomy->name)); ?>"><?php echo esc_html($taxonomy->name); ?></h2>
           <?php if (!empty($tax_posts_horizontal) || (!empty($tax_posts_vertical))): ?>
             <div class="works__listWrapper">

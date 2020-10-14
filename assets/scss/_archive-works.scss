@@ -2,7 +2,6 @@
 
 .works {
   &__gallery {
-    width: $--content-width-sm;
     margin: 0 auto;
   }
 
@@ -82,10 +81,6 @@
 
 @include mq(mobile) {
   .works {
-    &__gallery {
-      width: 92%;
-    }
-
     &__categories {
       margin: 40px 0 44px;
       font-size: 15px;
