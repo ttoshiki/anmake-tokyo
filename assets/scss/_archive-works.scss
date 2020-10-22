@@ -41,12 +41,12 @@
 
     &.-horizontal {
       grid-template-columns: repeat(3, 1fr);
-      grid-auto-rows: 200px;
+      grid-auto-rows: clamp(183px, 16.67vw, 1000px);
     }
 
     &.-vertical {
       grid-template-columns: repeat(6, 1fr);
-      grid-auto-rows: 250px;
+      grid-auto-rows: clamp(229px, 20.84vw, 1000px);
     }
   }
 
@@ -64,8 +64,48 @@
     }
   }
 
-  &__thumbnailLink {
+  &__detailInfo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     height: 100%;
+    background-color: rgba($color: $black, $alpha: 0.7);
+    opacity: 0;
+    transform: translate(-50%, -50%);
+  }
+
+  &__title {
+    padding: 2px 12px 0;
+    font-family: "Bebas Neue", cursive;
+    font-size: 18px;
+    line-height: 1;
+    color: $black;
+    text-align: center;
+    background-color: $white;
+  }
+
+  &__client {
+    display: block;
+    width: 92%;
+    margin: 6px auto 0;
+    font-size: 12px;
+    font-weight: 600;
+    color: $white;
+    text-align: center;
+  }
+
+  &__thumbnailLink {
+    position: relative;
+    height: 100%;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 
   &__paragraph {
@@ -104,12 +144,12 @@
     &__list {
       &.-horizontal {
         grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: 27vw;
+        grid-auto-rows: 25vw;
       }
 
       &.-vertical {
         grid-template-columns: repeat(4, 1fr);
-        grid-auto-rows: 36vw;
+        grid-auto-rows: 31.24vw;
       }
     }
 

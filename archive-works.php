@@ -83,6 +83,13 @@ get_header();
                             echo get_the_post_thumbnail($tax_post->ID, 'post-thumbnail');
                         }
                         ?>
+                      <div class="works__detailInfo">
+                        <span class="works__title"><?php echo $tax_post->post_title; ?></span>
+                        <?php if (get_field('client', $tax_post->ID)): ?>
+                          <span class="works__client"><?php the_field('client', $tax_post->ID); ?></span>
+                        <?php endif; ?>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/icon_angle.png" alt="矢印" class="people__icon">
+                      </div>
                       </a>
                     </li>
                   <?php endforeach; ?>
@@ -98,6 +105,13 @@ get_header();
                             echo get_the_post_thumbnail($tax_post->ID, 'post-thumbnail');
                         }
                         ?>
+                        <div class="works__detailInfo">
+                          <span class="works__title"><?php echo $tax_post->post_title; ?></span>
+                          <?php if (get_field('client', $tax_post->ID)): ?>
+                            <span class="works__client"><?php the_field('client', $tax_post->ID); ?></span>
+                          <?php endif; ?>
+                          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/icon_angle.png" alt="矢印" class="people__icon">
+                        </div>
                       </a>
                     </li>
                   <?php endforeach; ?>
