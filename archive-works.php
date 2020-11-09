@@ -42,8 +42,9 @@ get_header();
           if (!is_wp_error($taxonomies) && count($taxonomies)):
             foreach ($taxonomies as $taxonomy):
               $tax_posts_horizontal = get_posts(
-                array(
+                  array(
                   'post_type' => get_post_type(),
+                  'posts_per_page' => -1,
                   'taxonomy' => $taxonomy_name,
                   'term' => $taxonomy->slug,
                   'tax_query' => array(
@@ -56,8 +57,9 @@ get_header();
                 )
               );
               $tax_posts_vertical = get_posts(
-                array(
+                  array(
                   'post_type' => get_post_type(),
+                  'posts_per_page' => -1,
                   'taxonomy' => $taxonomy_name,
                   'term' => $taxonomy->slug,
                   'tax_query' => array(
@@ -73,7 +75,7 @@ get_header();
           <h2 class="works__category" id="<?php echo esc_html(strtolower($taxonomy->name)); ?>"><?php echo esc_html($taxonomy->name); ?></h2>
           <?php if (!empty($tax_posts_horizontal) || (!empty($tax_posts_vertical))): ?>
             <div class="works__listWrapper">
-              <?php if(!empty($tax_posts_horizontal)): ?>
+              <?php if (!empty($tax_posts_horizontal)): ?>
                 <ul class="works__list -horizontal">
                   <?php foreach ($tax_posts_horizontal as $tax_post): ?>
                     <li class="works__item">
