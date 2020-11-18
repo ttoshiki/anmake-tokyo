@@ -51,13 +51,15 @@ get_header();
                 <dd class="labelValue__value"><?php the_field('client'); ?></dd>
               </dl>
             <?php endif; ?>
+            <?php
+              $taxonomy_name = 'member';
+              $taxonomies = get_the_terms( $post->ID, $taxonomy_name);
+              if (!is_wp_error($taxonomies) && $taxonomies):
+            ?>
             <dl class="labelValue__row">
               <dt class="labelValue__label">MEMBER</dt>
               <dd class="labelValue__value singleWorks__members">
-                <?php
-                  $taxonomy_name = 'member';
-                  $taxonomies = get_the_terms( $post->ID, $taxonomy_name);
-                  if (!is_wp_error($taxonomies) && count($taxonomies)):
+              <?php
                     foreach ($taxonomies as $taxonomy):
                       $term_id = esc_html($taxonomy->term_id);
                       $term_idsp = "member_".$term_id; //カスタムフィールドを取得するのに必要なtermのIDは「taxonomyname_ + termID」
