@@ -153,10 +153,6 @@ get_header();
             <dd class="labelValue__value">2019年２月14日</dd>
           </dl>
           <dl class="labelValue__row">
-            <dt class="labelValue__label">CAPITAL</dt>
-            <dd class="labelValue__value">500万円</dd>
-          </dl>
-          <dl class="labelValue__row">
             <dt class="labelValue__label">ADDRESS</dt>
             <dd class="labelValue__value">
               <address>
@@ -173,7 +169,7 @@ get_header();
           </dl>
           <dl class="labelValue__row">
             <dt class="labelValue__label">MAIN BANK</dt>
-            <dd class="labelValue__value">かながわ信用金庫</dd>
+            <dd class="labelValue__value">みずほ銀行</dd>
           </dl>
           <dl class="labelValue__row">
             <dt class="labelValue__label">CLIENTS</dt>

@@ -143,11 +143,10 @@ address {
   padding: 12px 0 12px 24px;
   margin: -38px auto 0;
   font-family: "Bebas Neue", cursive;
-  font-size: 30px;
-  font-style: italic;
+  font-size: 32px;
   font-weight: 700;
   color: #ffffff;
-  letter-spacing: 6px;
+  letter-spacing: 2px;
   background-color: #000000;
 }
 
@@ -346,7 +345,7 @@ textarea::placeholder {
     width: 92%;
     padding: 8px 0 8px 18px;
     font-size: 22px;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
   }
   .labelValue {
     width: 92%;
@@ -605,10 +604,9 @@ textarea::placeholder {
 .header__nav a {
   font-family: "Bebas Neue", cursive;
   font-size: 17px;
-  font-style: italic;
   font-weight: 700;
   color: #ffffff;
-  letter-spacing: 4px;
+  letter-spacing: 1px;
 }
 
 .header .globalSns svg {
@@ -736,7 +734,7 @@ textarea::placeholder {
   }
   .header .menu a {
     color: #000000;
-    letter-spacing: 4px;
+    letter-spacing: 1px;
   }
 }
 
@@ -752,7 +750,7 @@ textarea::placeholder {
   font-style: italic;
   font-weight: bold;
   color: #ffffff;
-  letter-spacing: 6px;
+  letter-spacing: 2px;
   background-color: #1a1a1a;
 }
 
@@ -799,9 +797,8 @@ textarea::placeholder {
   margin: 30px 0 0;
   font-family: "Bebas Neue", cursive;
   font-size: 17px;
-  font-style: italic;
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 .footer__links ul {
@@ -838,7 +835,7 @@ textarea::placeholder {
 .footer__copyright {
   font-family: "Bebas Neue", cursive;
   color: #ffffff;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 @media screen and (max-width: 480px) {
@@ -846,7 +843,7 @@ textarea::placeholder {
     width: 92%;
     padding: 16px 0 16px 32px;
     font-size: 22px;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
   }
   .contactButton__icon {
     right: 32px;
@@ -1169,10 +1166,9 @@ textarea::placeholder {
   margin: 0;
   font-family: "Bebas Neue", cursive;
   font-size: 50px;
-  font-style: italic;
   font-weight: 700;
   text-align: center;
-  letter-spacing: 6px;
+  letter-spacing: 2px;
 }
 
 .about__messageContents {
@@ -1228,10 +1224,9 @@ textarea::placeholder {
   padding: 60px 0 0;
   margin: 0;
   font-size: 50px;
-  font-style: italic;
   color: #ffffff;
   text-align: center;
-  letter-spacing: 5px;
+  letter-spacing: 2px;
 }
 
 .about__headline.-history {
@@ -1282,11 +1277,11 @@ textarea::placeholder {
 }
 
 .about__serviceHeadlineNum, .about__serviceHeadlineName {
-  padding: 1px 6px;
+  padding: 1px 8px 1px 6px;
   font-size: 18px;
   line-height: 1;
   color: #ffffff;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   background-color: #000000;
 }
 
@@ -1313,9 +1308,8 @@ textarea::placeholder {
   margin: 0;
   font-family: "Bebas Neue", cursive;
   font-size: 50px;
-  font-style: italic;
   color: #ffffff;
-  letter-spacing: 5px;
+  letter-spacing: 2px;
 }
 
 .about .labelValue {
@@ -1449,7 +1443,7 @@ textarea::placeholder {
   }
   .about__messageHeadline {
     font-size: 32px;
-    letter-spacing: 5px;
+    letter-spacing: 2px;
   }
   .about__messageContents {
     flex-direction: column;
@@ -1484,7 +1478,7 @@ textarea::placeholder {
   .about__headline {
     padding: 32px 0 0;
     font-size: 32px;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
   }
   .about__headline.-history {
     margin: 0 0 32px;
@@ -1686,11 +1680,10 @@ textarea::placeholder {
   padding: 0 24px;
   margin: 0 12px 0 0;
   font-family: "Bebas Neue", cursive;
-  font-style: italic;
   font-weight: 700;
   color: #ffffff;
   text-align: center;
-  letter-spacing: 4px;
+  letter-spacing: 1px;
   background-color: #000000;
 }
 
@@ -1747,7 +1740,7 @@ textarea::placeholder {
   margin: 6px 0 0;
   font-family: "Bebas Neue", cursive;
   font-size: 16px;
-  font-style: normal;
+  font-style: italic;
   font-weight: 700;
   line-height: 1.1;
   color: #000000;
@@ -1787,7 +1780,7 @@ textarea::placeholder {
     padding: 0;
     margin: 0 auto;
     font-size: 15px;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
   }
   .people__category.-sp {
     display: flex;
@@ -1816,11 +1809,10 @@ textarea::placeholder {
 .works__categories {
   margin: 64px 0 8px;
   font-family: "Bebas Neue", cursive;
-  font-size: 17px;
-  font-style: italic;
+  font-size: 18px;
   font-weight: 700;
   text-align: center;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 .works__categories a {
@@ -1836,7 +1828,7 @@ textarea::placeholder {
   font-style: italic;
   font-weight: 700;
   text-align: center;
-  letter-spacing: 4px;
+  letter-spacing: 2px;
 }
 
 .works__listWrapper {
@@ -1921,7 +1913,7 @@ textarea::placeholder {
   font-style: italic;
   font-weight: 700;
   text-align: center;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 @media screen and (max-width: 480px) {
@@ -1987,11 +1979,10 @@ textarea::placeholder {
   margin: 0;
   font-family: "Bebas Neue", cursive;
   font-size: 15px;
-  font-style: italic;
   font-weight: 700;
   color: #ffffff;
   text-align: center;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   background-color: #7f7f7f;
 }
 
@@ -2016,7 +2007,6 @@ textarea::placeholder {
   margin: 4px 0 0;
   font-family: "Bebas Neue", cursive;
   font-size: 17px;
-  font-style: italic;
   font-weight: 700;
   letter-spacing: 1px;
 }
@@ -2064,10 +2054,9 @@ textarea::placeholder {
   margin: 0;
   font-family: "Bebas Neue", cursive;
   font-size: 30px;
-  font-style: italic;
   font-weight: 700;
   text-align: center;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
 }
 
 @media screen and (max-width: 480px) {
@@ -2229,6 +2218,13 @@ textarea::placeholder {
   text-align: center;
   letter-spacing: 4px;
 }
+
+.about .labelValue__label {
+    color: #000000;
+    background-color: #ffffff;
+    padding-left: 1px;
+}
+
 
 @media screen and (max-width: 480px) {
   .singleWorks__movie {
