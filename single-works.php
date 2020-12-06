@@ -30,7 +30,7 @@ get_header();
           <?php
               $post_terms = get_the_terms('', 'category_works')
           ?>
-          <h1 class="page__title"><?php the_title(); ?><span class="singleWorks__category"> / <?php if (!empty($post_terms)) {
+          <h1 class="page__title -ja"><?php the_title(); ?><span class="singleWorks__category"> / <?php if (!empty($post_terms)) {
               echo strtoupper($post_terms[0]->slug);
           } ?></span></h1>
           <div class="singleWorks__movie">
@@ -57,7 +57,7 @@ get_header();
               if (!is_wp_error($taxonomies) && $taxonomies):
             ?>
             <dl class="labelValue__row">
-              <dt class="labelValue__label">MEMBER</dt>
+              <dt class="labelValue__label">DIRECTOR</dt>
               <dd class="labelValue__value singleWorks__members">
               <?php
                     foreach ($taxonomies as $taxonomy):
@@ -76,12 +76,6 @@ get_header();
                 <?php endif; ?>
               </dd>
             </dl>
-            <?php if (get_field('website')): ?>
-              <dl class="labelValue__row -website">
-                <dt class="labelValue__label">WEBSITE</dt>
-                <dd class="labelValue__value"><a href="<?php the_field('website'); ?>" class="singleWorks__link"><?php the_field('website'); ?></a></dd>
-              </dl>
-            <?php endif; ?>
             <?php if (get_field('credit')): ?>
               <dl class="labelValue__row">
                 <dt class="labelValue__label">CREDIT</dt>

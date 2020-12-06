@@ -22,7 +22,9 @@ html {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Medium", "Yu Gothic", Verdana, Meiryo, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
+    "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Medium", "Yu Gothic",
+    Verdana, Meiryo, sans-serif;
   font-size: 14px;
   line-height: 1.5;
   color: #333;
@@ -150,6 +152,13 @@ address {
   background-color: #000000;
 }
 
+.page__title.-ja {
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
+    "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Medium", "Yu Gothic",
+    Verdana, Meiryo, sans-serif;
+  letter-spacing: initial;
+}
+
 .divider {
   max-width: 1000px;
 }
@@ -182,7 +191,8 @@ address {
   background-color: #000000;
 }
 
-.related__title, .related__category {
+.related__title,
+.related__category {
   font-family: "Bebas Neue", cursive;
   font-size: 15px;
   font-style: italic;
@@ -547,8 +557,11 @@ textarea::placeholder {
   background-color: #3983c8;
 }
 
-.page-numbers.next, .page-numbers.prev {
-  font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Medium", "Yu Gothic", Verdana, Meiryo, sans-serif;
+.page-numbers.next,
+.page-numbers.prev {
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
+    "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Medium", "Yu Gothic",
+    Verdana, Meiryo, sans-serif;
   color: #3983c8;
   background-color: #ffffff;
   border: 1px solid #3983c8;
@@ -655,7 +668,8 @@ textarea::placeholder {
     justify-content: space-between;
     width: 100%;
   }
-  .header.-fixed, .header.-opened {
+  .header.-fixed,
+  .header.-opened {
     position: fixed;
     background-color: #000000;
   }
@@ -958,7 +972,8 @@ textarea::placeholder {
 }
 
 .home__siteLink .c-btn::after {
-  filter: invert(88%) sepia(61%) saturate(0%) hue-rotate(229deg) brightness(107%) contrast(101%);
+  filter: invert(88%) sepia(61%) saturate(0%) hue-rotate(229deg)
+    brightness(107%) contrast(101%);
 }
 
 .home__siteLinksTitleEn {
@@ -1251,7 +1266,8 @@ textarea::placeholder {
   margin: 0 0 132px;
 }
 
-.about__serviceItem:nth-last-child(2), .about__serviceItem:last-child {
+.about__serviceItem:nth-last-child(2),
+.about__serviceItem:last-child {
   margin: 0 0 64px;
 }
 
@@ -1276,7 +1292,8 @@ textarea::placeholder {
   line-height: 1.5;
 }
 
-.about__serviceHeadlineNum, .about__serviceHeadlineName {
+.about__serviceHeadlineNum,
+.about__serviceHeadlineName {
   padding: 1px 8px 1px 6px;
   font-size: 18px;
   line-height: 1;
@@ -1504,7 +1521,8 @@ textarea::placeholder {
   .about__serviceHeadline {
     top: -16px;
   }
-  .about__serviceHeadlineNum, .about__serviceHeadlineName {
+  .about__serviceHeadlineNum,
+  .about__serviceHeadlineName {
     font-size: 16px;
   }
   .about__serviceSubHeadline {
@@ -1879,7 +1897,6 @@ textarea::placeholder {
 
 .works__title {
   padding: 2px 12px 0;
-  font-family: "Bebas Neue", cursive;
   font-size: 18px;
   line-height: 1;
   color: #000000;
@@ -2127,9 +2144,10 @@ textarea::placeholder {
 
 .singleWorks__headline {
   margin: 0 0 40px;
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
+    "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Medium", "Yu Gothic",
+    Verdana, Meiryo, sans-serif;
   font-size: 20px;
-  font-style: italic;
-  letter-spacing: 2px;
 }
 
 .singleWorks__link {
@@ -2220,11 +2238,10 @@ textarea::placeholder {
 }
 
 .about .labelValue__label {
-    color: #000000;
-    background-color: #ffffff;
-    padding-left: 1px;
+  padding-left: 1px;
+  color: #000000;
+  background-color: #ffffff;
 }
-
 
 @media screen and (max-width: 480px) {
   .singleWorks__movie {
